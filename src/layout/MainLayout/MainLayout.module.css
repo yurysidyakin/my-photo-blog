@@ -1,0 +1,23 @@
+.section-main {
+	display: flex;
+	align-items: center;
+	padding: 0px 20px;
+	align-items: flex-start;
+	position: relative;
+}
+
+.section {
+	flex: 1;
+	padding-top: 30px;
+	border-right: 1px solid rgb(243, 238, 234);
+	height: 100vh;
+}
+
+.section:last-child {
+	border-right: none;
+}
+
+.photo_author {
+	width: 300px;
+	border-radius: 5%;
+}
