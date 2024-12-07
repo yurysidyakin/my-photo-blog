@@ -3,7 +3,7 @@ import './App.css';
 function App() {
 	return (
 		<>
-			<div></div>
+			<div>Whereas recognition of the inherent dignity</div>
 		</>
 	);
 }
