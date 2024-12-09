@@ -3,9 +3,16 @@
 	align-items: center;
 }
 
-.menu_list {
+.list {
 	display: flex;
 	gap: 30px;
 	align-items: center;
-	margin-left: 40%;
+}
+
+.link {
+	transition: all 0.5s ease;
+}
+
+.link:hover {
+	filter: invert(50%);
 }

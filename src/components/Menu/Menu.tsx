@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styles from './Menu.module.css';
 import { MenuProps } from './Menu.props';
 
@@ -5,17 +6,16 @@ function Menu({ children }: MenuProps) {
 	return (
 		<>
 			<nav className={styles.menu}>
-				<ul className={styles.menu_list}>
-					<li className={styles.menu_link}>
-						<a href='#'>Main</a>
+				<ul className={styles.list}>
+					<li className={styles.link}>
+						<NavLink to='/'>главная</NavLink>
 					</li>
-					<li>
-						<a href='#'>Favorite</a>
+					<li className={styles.link}>
+						<NavLink to='/about'>контакты</NavLink>
 					</li>
 				</ul>
 				{children}
 			</nav>
-			<div className={styles.menu_link}>en/ru</div>
 		</>
 	);
 }

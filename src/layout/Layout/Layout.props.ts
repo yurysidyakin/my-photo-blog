@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface HeaderProps {
+export interface LayoutProps {
 	children?: ReactNode;
 }
