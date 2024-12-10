@@ -2,8 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css';
-import About from './pages/about/About.tsx';
-import Main from './pages/main/Main.tsx';
+import About from './pages/About/About.tsx';
+import Error from './pages/Error/Error.tsx';
+import Main from './pages/Main/Main.tsx';
 
 const router = createBrowserRouter([
 	{
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
 	{
 		path: '/about',
 		element: <About />,
+	},
+	{
+		path: '*',
+		element: <Error />,
 	},
 ]);
 
