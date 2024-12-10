@@ -1,11 +1,8 @@
 import './App.css';
+import Layout from './layout/Layout/Layout';
 
 function App() {
-	return (
-		<>
-			<div>Whereas recognition of the inherent dignity</div>
-		</>
-	);
+	return <Layout />;
 }
 
 export default App;

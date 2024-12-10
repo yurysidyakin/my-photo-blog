@@ -1,20 +1,39 @@
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	--font: 'Bodoni Moda', serif;
+	--footer-color: black;
+	--footer-text-color: white;
+	--text-color: black;
+	--text-color-paragraph: grey;
+	--separator-color: black;
+	--text-color-hover: grey;
 }
 
 body {
-	font-family: 'Merienda', cursive;
-	font-optical-sizing: auto;
+	font-family: var(--font);
 	font-weight: 400;
 	font-style: normal;
-	margin: 0;
-	padding: 20px;
-	min-width: 320px;
+	margin: 0 auto;
 	min-height: 100vh;
+	overflow: hidden;
+}
+
+a,
+ul,
+li,
+h1,
+p {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+a img {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
 }

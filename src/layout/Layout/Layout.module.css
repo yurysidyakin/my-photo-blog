@@ -1,0 +1,6 @@
+.layout {
+	max-width: 900px;
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0 auto;
+}
