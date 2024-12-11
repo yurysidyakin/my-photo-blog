@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router';
-import Footer from '../../components/Footer/Footer';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Layout from '../../layout/Layout/Layout';
 import styles from './Error.module.css';
@@ -24,7 +23,6 @@ function Error() {
 					/>
 				</div>
 			</Layout>
-			<Footer />
 		</>
 	);
 }

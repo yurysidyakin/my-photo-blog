@@ -1,4 +1,3 @@
-import Footer from '../../components/Footer/Footer';
 import Paragraph from '../../components/Paragraph/Paragraph';
 import Headling from '../../components/Title/Headlig';
 import Layout from '../../layout/Layout/Layout';
@@ -63,7 +62,7 @@ function About() {
 					</div>
 				</div>
 			</Layout>
-			<Footer />
+			{/* <Footer /> */}
 		</>
 	);
 }

@@ -4,6 +4,7 @@
 	height: 50px;
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	color: var(--footer-text-color);
 }
 .footer-content {

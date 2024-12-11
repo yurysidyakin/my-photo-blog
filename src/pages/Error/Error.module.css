@@ -8,11 +8,16 @@
 
 .error-icon {
 	width: 64px;
+	transition: all 0.5s ease;
 }
 .back-link {
 	transition: all 0.5s ease;
 }
 
 .back-link:hover {
+	filter: invert(50%);
+}
+
+.error-icon:hover {
 	filter: invert(50%);
 }
