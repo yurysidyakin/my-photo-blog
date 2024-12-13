@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Loader from './components/Loader/Loader.tsx';
 import './index.css';
-import About from './pages/about/About.tsx';
-import Main from './pages/main/Main.tsx';
+import About from './pages/About/About.tsx';
+import Error from './pages/Error/Error.tsx';
+
+const Main = lazy(() => import('./pages/Main/Main.tsx'));
+const Layout = lazy(() => import('./layout/Layout/Layout.tsx'));
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Main />,
-	},
-	{
-		path: '/about',
-		element: <About />,
+		element: <Layout />,
+
+		children: [
+			{
+				path: '/',
+				element: (
+					<Suspense fallback={<Loader />}>
+						<Main />
+					</Suspense>
+				),
+			},
+			{
+				path: '/about',
+				element: <About />,
+			},
+			{
+				path: '*',
+				element: <Error />,
+			},
+		],
 	},
 ]);
 

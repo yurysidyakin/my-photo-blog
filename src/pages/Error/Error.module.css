@@ -1,0 +1,23 @@
+.error {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+	text-align: center;
+}
+
+.error-icon {
+	width: 64px;
+	transition: all 0.5s ease;
+}
+.back-link {
+	transition: all 0.5s ease;
+}
+
+.back-link:hover {
+	filter: invert(50%);
+}
+
+.error-icon:hover {
+	filter: invert(50%);
+}
