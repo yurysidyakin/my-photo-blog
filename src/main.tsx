@@ -7,23 +7,31 @@ import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
 
 const Main = lazy(() => import('./pages/Main/Main.tsx'));
+const Layout = lazy(() => import('./layout/Layout/Layout.tsx'));
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: (
-			<Suspense fallback={<Loader />}>
-				<Main />
-			</Suspense>
-		),
-	},
-	{
-		path: '/about',
-		element: <About />,
-	},
-	{
-		path: '*',
-		element: <Error />,
+		element: <Layout />,
+
+		children: [
+			{
+				path: '/',
+				element: (
+					<Suspense fallback={<Loader />}>
+						<Main />
+					</Suspense>
+				),
+			},
+			{
+				path: '/about',
+				element: <About />,
+			},
+			{
+				path: '*',
+				element: <Error />,
+			},
+		],
 	},
 ]);
 
