@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
-import Main from './pages/Main/Main.tsx';
+
+const Main = lazy(() => import('./pages/Main/Main.tsx'));
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Main />,
+		element: (
+			<Suspense fallback={<>Загрузка...</>}>
+				<Main />,
+			</Suspense>
+		),
 	},
 	{
 		path: '/about',
