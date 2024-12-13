@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Loader from './components/Loader/Loader.tsx';
 import './index.css';
 import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
@@ -11,8 +12,8 @@ const router = createBrowserRouter([
 	{
 		path: '/',
 		element: (
-			<Suspense fallback={<>Загрузка...</>}>
-				<Main />,
+			<Suspense fallback={<Loader />}>
+				<Main />
 			</Suspense>
 		),
 	},
