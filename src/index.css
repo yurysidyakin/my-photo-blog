@@ -42,7 +42,3 @@ a img {
 	padding: 0;
 	border: none;
 }
-
-img {
-	image-rendering: pixelated;
-}
