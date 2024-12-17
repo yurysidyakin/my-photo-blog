@@ -28,7 +28,7 @@
 }
 
 .social {
-	transition: transform 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 .social:hover {

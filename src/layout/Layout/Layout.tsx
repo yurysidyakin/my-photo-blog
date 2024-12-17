@@ -7,9 +7,11 @@ import { LayoutProps } from './Layout.props';
 function Layout({ children }: LayoutProps) {
 	return (
 		<div className={styles.layout}>
-			<Header />
-			<Outlet />
-			{children}
+			<div className={styles.container}>
+				<Header />
+				<Outlet />
+				{children}
+			</div>
 			<Footer />
 		</div>
 	);
