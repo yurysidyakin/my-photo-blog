@@ -3,11 +3,11 @@ import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Loader from './components/Loader/Loader.tsx';
 import './index.css';
+import Layout from './layout/Layout/Layout.tsx';
 import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
 
 const Main = lazy(() => import('./pages/Main/Main.tsx'));
-const Layout = lazy(() => import('./layout/Layout/Layout.tsx'));
 
 const router = createBrowserRouter([
 	{
