@@ -5,7 +5,11 @@ function Footer({ children }: FooterProps) {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles['footer-content']}>
-				<img src='/public/icon/logo-footer.svg' alt='logo footer' />
+				<img
+					className={styles['footer-logo']}
+					src='/public/icon/logo-footer.svg'
+					alt='Footer logo'
+				/>
 				<div className={styles['footer-text']}>©2024. All rights reserved.</div>
 				<a href='#'>
 					<img src='/public/icon/github-icon.svg' alt='Git icon' />
