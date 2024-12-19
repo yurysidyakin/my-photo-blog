@@ -25,13 +25,44 @@
 .author {
 	width: 300px;
 	border-radius: 5px;
+	max-height: 450px;
+	object-fit: cover;
 }
 
 .social {
 	transition: all 0.5s ease;
+	min-width: 31px;
 }
 
 .social:hover {
 	filter: invert(50%);
 	transform: scale(1.25);
+}
+@media screen and (max-width: 900px) {
+	.about {
+		align-items: center;
+	}
+	.title {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.about {
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.author {
+		border-radius: 50%;
+		width: 300px;
+		height: 300px;
+	}
+	.content {
+		align-items: center;
+	}
+
+	.text {
+		text-align: center;
+	}
 }
