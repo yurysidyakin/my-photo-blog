@@ -1,5 +1,5 @@
 import Paragraph from '../../components/Paragraph/Paragraph';
-import Headling from '../../components/Title/Headlig';
+import Headling from '../../components/Headling/Headlig';
 import styles from './About.module.css';
 
 function About() {
@@ -12,7 +12,7 @@ function About() {
 			/>
 			<div className={styles['content']}>
 				<div className={styles['text']}>
-					<Headling>
+					<Headling className={styles['title']}>
 						Персональный фотоальбом
 						<br />
 						пленочной фотографии
