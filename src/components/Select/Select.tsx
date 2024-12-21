@@ -14,6 +14,9 @@ function Select({ children, ...props }: SelectProps) {
 				<option className={styles.option} value='Kodak Vision 500'>
 					Kodak Vision 500
 				</option>
+				<option className={styles.option} value='Hitchcock 250'>
+					Hitchcock 250
+				</option>
 				{children}
 			</select>
 		</div>
