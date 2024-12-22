@@ -1,0 +1,22 @@
+.photo-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 50px;
+	position: relative;
+	height: 100vh;
+	gap: 20px;
+}
+
+.photo {
+	border-radius: 5px;
+	width: 50%;
+}
+
+.back {
+	color: var(--text-color-paragraph);
+	font-style: italic;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from 'react';
+import { Link } from 'react-router';
 import { photodb } from '../../db/photodb';
 import { IPhoto } from '../../interfaces/photo.inerface';
 import Select from '../Select/Select';
@@ -24,7 +25,11 @@ function MenuList({ children, ...props }: MenuListProps) {
 				{filterPhotos
 					.sort(() => Math.random() - 0.5)
 					.map(photo => (
-						<div key={photo.id} className={styles.wrapper}>
+						<Link
+							to={`/photo/${photo.id}`}
+							key={photo.id}
+							className={styles.wrapper}
+						>
 							<img src={photo.path} alt='photo' className={styles.photo} />
 							<div className={styles.desc}>
 								<div className={styles.item}>
@@ -44,7 +49,7 @@ function MenuList({ children, ...props }: MenuListProps) {
 									{photo.plenka}
 								</div>
 							</div>
-						</div>
+						</Link>
 					))}
 				{children}
 			</main>
