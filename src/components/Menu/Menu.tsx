@@ -11,6 +11,9 @@ function Menu({ children }: MenuProps) {
 						<NavLink to='/'>главная</NavLink>
 					</li>
 					<li className={styles.link}>
+						<NavLink to='/favorite'>избранное</NavLink>
+					</li>
+					<li className={styles.link}>
 						<NavLink to='/about'>контакты</NavLink>
 					</li>
 				</ul>

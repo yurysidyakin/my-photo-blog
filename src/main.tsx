@@ -6,6 +6,7 @@ import './index.css';
 import Layout from './layout/Layout/Layout.tsx';
 import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
+import Favorite from './pages/Favorite/Favorite.tsx';
 import PhotoCard from './pages/PhotoCard/Photo.tsx';
 
 const Main = lazy(() => import('./pages/Main/Main.tsx'));
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
 			{
 				path: '/about',
 				element: <About />,
+			},
+			{
+				path: '/favorite',
+				element: <Favorite />,
 			},
 			{
 				path: '/photo/:id',
