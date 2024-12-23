@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { Link } from 'react-router';
 import { photodb } from '../../db/photodb';
-import { IPhoto } from '../../interfaces/photo.inerface';
+import { IPhoto } from '../../interfaces/photo.interface';
 import Select from '../Select/Select';
 import styles from './MenuList.module.css';
 import { MenuListProps } from './MenuList.props';
