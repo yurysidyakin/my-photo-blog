@@ -37,7 +37,7 @@ function Photo({ ...props }: PhotoProps): JSX.Element {
 				<div className={styles['photo_item']}>
 					<img
 						className={styles['icon']}
-						src='/public/icon/location-icon.png'
+						src='/public/icon/location-icon.svg'
 						alt='location'
 					/>
 					<div className={styles['photo_text']}>{photo.location}</div>

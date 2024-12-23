@@ -46,7 +46,6 @@
 	gap: 10px;
 }
 
-
 @media screen and (max-width: 900px) {
 	.main {
 		justify-content: space-evenly;

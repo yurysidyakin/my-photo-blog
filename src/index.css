@@ -28,13 +28,17 @@ a,
 ul,
 li,
 h1,
-p {
+p,
+button {
 	list-style: none;
+	outline: none;
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+	background: none;
+	border: none;
 }
 
 a img {

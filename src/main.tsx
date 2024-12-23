@@ -8,6 +8,8 @@ import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
 import Favorite from './pages/Favorite/Favorite.tsx';
 import PhotoCard from './pages/PhotoCard/Photo.tsx';
+import { Provider } from 'react-redux';
+import { store } from './store/store.ts';
 
 const Main = lazy(() => import('./pages/Main/Main.tsx'));
 
@@ -47,6 +49,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<Provider store={store}>
+			<RouterProvider router={router} />
+		</Provider>
 	</React.StrictMode>
 );
