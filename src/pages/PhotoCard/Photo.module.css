@@ -1,0 +1,40 @@
+.photo-card {
+	display: flex;
+	align-items: flex-start;
+	padding-top: 50px;
+	position: relative;
+	height: 100vh;
+	gap: 50px;
+}
+
+.photo {
+	border-radius: 5px;
+	width: 50%;
+}
+
+.back {
+	color: var(--text-color-paragraph);
+	font-style: italic;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.photo_desc {
+	color: var(--text-color-paragraph);
+	display: flex;
+	align-items: start;
+	gap: 30px;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.photo_item {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+}
+
+.icon {
+	width: 30px;
+}

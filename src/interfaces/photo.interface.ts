@@ -3,4 +3,5 @@ export interface IPhoto {
 	path: string;
 	camera: string;
 	plenka: string;
+	location: string;
 }

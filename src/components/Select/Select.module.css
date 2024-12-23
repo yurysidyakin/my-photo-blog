@@ -8,6 +8,7 @@
 	color: var(--text-color-paragraph);
 	outline: none;
 	border-radius: 5px;
+	font-style: italic;
 }
 
 .option {
