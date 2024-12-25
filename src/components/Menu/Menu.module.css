@@ -13,6 +13,10 @@
 	transition: all 0.5s ease;
 }
 
+.active {
+	color: var(--text-color-hover);
+}
+
 .link:hover {
 	filter: invert(50%);
 }
