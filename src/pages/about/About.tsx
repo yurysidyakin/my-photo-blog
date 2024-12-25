@@ -1,5 +1,5 @@
-import Paragraph from '../../components/Paragraph/Paragraph';
 import Headling from '../../components/Headling/Headlig';
+import Paragraph from '../../components/Paragraph/Paragraph';
 import styles from './About.module.css';
 
 function About() {
@@ -8,6 +8,7 @@ function About() {
 			<img
 				src='/public/photo/author.png'
 				alt='photo_icon'
+				loading='lazy'
 				className={styles['author']}
 			/>
 			<div className={styles['content']}>

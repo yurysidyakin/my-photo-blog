@@ -21,8 +21,6 @@ export const favoriteSlice = createSlice({
 			const existingPhotoIndex = state.photos.findIndex(
 				photo => photo.id === action.payload.id
 			);
-			console.log(existingPhotoIndex);
-			console.log(state.photos);
 
 			if (existingPhotoIndex === -1) {
 				state.photos.push(action.payload);
