@@ -3,17 +3,20 @@ import MenuList from '../../components/MenuList/MenuList';
 import Select from '../../components/Select/Select';
 import { photodb } from '../../db/photodb';
 import { IPhoto } from '../../interfaces/photo.interface';
+import { MainProps } from './Main.props';
 
-function Main() {
-	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>(photodb);
+function Main({ items = photodb }: MainProps) {
+	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>(items);
 
 	const updateFilter = (event: ChangeEvent<HTMLSelectElement>) => {
 		const newValue = event.target.value;
-		if (newValue) {
-			setFilterPhotos(photodb.filter(el => el.plenka === newValue));
-		} else {
-			setFilterPhotos(photodb);
+		let filteredItems = items;
+
+		if (newValue && newValue !== 'все фотографии') {
+			filteredItems = items.filter(el => el.plenka === newValue);
 		}
+
+		setFilterPhotos(filteredItems);
 	};
 	return (
 		<main>

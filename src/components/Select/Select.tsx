@@ -9,6 +9,7 @@ function Select({ children, ...props }: SelectProps) {
 		{ value: 'Tasma 100', label: 'Tasma 100' },
 		{ value: 'Kodak Vision 500', label: 'Kodak Vision 500' },
 		{ value: 'Hitchcock 250', label: 'Hitchcock 250' },
+		{ value: 'все фотографии', label: 'все фотографии' },
 	];
 
 	const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {

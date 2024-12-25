@@ -3,20 +3,21 @@ import { NavLink } from 'react-router';
 import { IPhoto } from '../../interfaces/photo.interface';
 import { favoriteActions } from '../../store/favorite.slice';
 import { AppDispatch } from '../../store/store';
+import Like from '../Like/Like';
 import styles from './MenuList.module.css';
 import { MenuListProps } from './MenuList.props';
 
 function MenuList({ children, items, ...props }: MenuListProps) {
 	const dispatch = useDispatch<AppDispatch>();
 
-	const add = (photo: IPhoto) => {
-		dispatch(favoriteActions.add(photo));
+	const toggle = (photo: IPhoto) => {
+		dispatch(favoriteActions.toggle(photo));
 	};
 
 	return (
 		<div className={styles.main} {...props}>
 			{items
-				.toSorted(() => Math.random() - 0.5)
+				// .toSorted(() => Math.random() - 0.5)
 				.map(photo => (
 					<div key={photo.id} className={styles.wrapper}>
 						<NavLink to={`/photo/${photo.id}`}>
@@ -26,7 +27,7 @@ function MenuList({ children, items, ...props }: MenuListProps) {
 							<div className={styles.item}>
 								<img
 									className={styles.icon}
-									src='/public/icon/camera-icon.png'
+									src='/public/icon/camera-icon.svg'
 									alt='camera-icon'
 								/>
 								{photo.camera}
@@ -35,7 +36,7 @@ function MenuList({ children, items, ...props }: MenuListProps) {
 							<div className={styles.item}>
 								<img
 									className={styles.icon}
-									src='/public/icon/plenka-icon.png'
+									src='/public/icon/plenka-icon.svg'
 									alt='plenka-icon'
 								/>
 								{photo.plenka}
@@ -43,9 +44,9 @@ function MenuList({ children, items, ...props }: MenuListProps) {
 							<div className={styles.item}>
 								<button
 									className={styles['button-like']}
-									onClick={() => add(photo)}
+									onClick={() => toggle(photo)}
 								>
-									<img src='/public/icon/like-icon.svg' alt='like' />
+									<Like />
 								</button>
 							</div>
 						</div>
