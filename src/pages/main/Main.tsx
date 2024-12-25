@@ -21,7 +21,7 @@ function Main({ items = photodb }: MainProps) {
 	return (
 		<main>
 			<Select onChange={updateFilter} />
-			<MenuList items={filterPhotos} />;
+			<MenuList items={filterPhotos} />
 		</main>
 	);
 }

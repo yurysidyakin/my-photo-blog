@@ -4,5 +4,5 @@ export interface IPhoto {
 	camera: string;
 	plenka: string;
 	location: string;
-	count: number;
+	count?: number;
 }
