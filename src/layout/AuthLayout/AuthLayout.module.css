@@ -1,0 +1,14 @@
+.auth-layout {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+}
+.container {
+	max-width: 900px;
+	min-width: 320px;
+	margin: 0 auto;
+	padding: 0px 10px;
+	position: relative;
+}
