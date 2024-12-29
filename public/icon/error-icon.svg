@@ -1,0 +1,19 @@
+<svg width="300.000000" height="158.823563" viewBox="0 0 300 158.824" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip24_588">
+			<rect id="emoji-sad" rx="0.000000" width="99.000000" height="99.000000" transform="translate(100.500000 30.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="States/Global/Error" rx="0.000000" width="299.000000" height="157.823563" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<rect id="BG" rx="24.000000" width="300.000000" height="158.823563" fill="#EE7D52" fill-opacity="1.000000"/>
+	<rect id="emoji-sad" rx="0.000000" width="99.000000" height="99.000000" transform="translate(100.500000 30.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip24_588)">
+		<path id="Vector (Stroke)" d="M150 42.5C129.28 42.5 112.5 59.28 112.5 80C112.5 100.71 129.28 117.5 150 117.5C170.71 117.5 187.5 100.71 187.5 80C187.5 59.28 170.71 42.5 150 42.5ZM104.16 80C104.16 54.68 124.68 34.16 150 34.16C175.31 34.16 195.83 54.68 195.83 80C195.83 105.31 175.31 125.83 150 125.83C124.68 125.83 104.16 105.31 104.16 80Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector" d="M150 92.5C141.64 92.5 137.77 97.1 137.06 98.53C136.03 100.58 133.52 101.42 131.47 100.39C129.41 99.36 128.57 96.86 129.6 94.8C131.67 90.67 138.35 84.16 150 84.16C161.64 84.16 168.33 90.67 170.39 94.8C171.42 96.86 170.58 99.36 168.53 100.39C166.47 101.42 163.96 100.58 162.94 98.53C162.22 97.1 158.35 92.5 150 92.5Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector (Stroke)" d="M133.33 67.5C133.33 65.19 135.19 63.33 137.5 63.33L137.54 63.33C139.84 63.33 141.7 65.19 141.7 67.5C141.7 69.8 139.84 71.66 137.54 71.66L137.5 71.66C135.19 71.66 133.33 69.8 133.33 67.5Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector (Stroke)" d="M158.33 67.5C158.33 65.19 160.19 63.33 162.5 63.33L162.54 63.33C164.84 63.33 166.7 65.19 166.7 67.5C166.7 69.8 164.84 71.66 162.54 71.66L162.5 71.66C160.19 71.66 158.33 69.8 158.33 67.5Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

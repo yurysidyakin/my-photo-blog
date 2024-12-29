@@ -15,7 +15,7 @@ function Error() {
 			</NavLink>
 			<img
 				className={styles['error-icon']}
-				src='/public/icon/error-icon.png'
+				src='/public/icon/error-icon.svg'
 				alt='Error'
 			/>
 		</div>
