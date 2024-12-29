@@ -10,6 +10,9 @@ import Favorite from './pages/Favorite/Favorite.tsx';
 import PhotoCard from './pages/PhotoCard/Photo.tsx';
 import { Provider } from 'react-redux';
 import { store } from './store/store.ts';
+import AuthLayout from './layout/AuthLayout/AuthLayout.tsx';
+import Login from './pages/Login/Login.tsx';
+import Register from './pages/Register/Register.tsx';
 
 const Main = lazy(() => import('./pages/Main/Main.tsx'));
 
@@ -42,6 +45,20 @@ const router = createBrowserRouter([
 			{
 				path: '*',
 				element: <Error />,
+			},
+		],
+	},
+	{
+		path: '/auth',
+		element: <AuthLayout />,
+		children: [
+			{
+				path: 'login',
+				element: <Login />,
+			},
+			{
+				path: 'register',
+				element: <Register />,
 			},
 		],
 	},
