@@ -24,8 +24,10 @@ function Login() {
 				</div>
 				<Button>вход</Button>
 			</form>
-
-			<Link to='/auth/register'>регистрация</Link>
+			<div className={styles['links']}>
+				<div>Нет аккаунта?</div>
+				<Link to='/auth/register'>Зарегистрироваться</Link>
+			</div>
 		</div>
 	);
 }
