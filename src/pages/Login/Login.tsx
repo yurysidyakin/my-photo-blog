@@ -10,11 +10,15 @@ function Login() {
 			<Headling>Вход</Headling>
 			<form className={styles.form}>
 				<div className={styles['field']}>
-					<label htmlFor='email'>email</label>
+					<label htmlFor='email'>
+						<img src='/public/icon/email-icon.svg' alt='email' />
+					</label>
 					<Input id='email' name='email' placeholder='Email' />
 				</div>
 				<div className={styles['field']}>
-					<label htmlFor='password'>password</label>
+					<label htmlFor='password'>
+						<img src='/public/icon/password-icon.svg' alt='password' />
+					</label>
 					<Input
 						id='password'
 						name='password'

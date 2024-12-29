@@ -10,11 +10,15 @@ function Register() {
 			<Headling>Регистрация</Headling>
 			<form className={styles['form']}>
 				<div className={styles['field']}>
-					<label htmlFor='email'>Ваш email</label>
+					<label htmlFor='email'>
+						<img src='/public/icon/email-icon.svg' alt='email' />
+					</label>
 					<Input id='email' name='email' placeholder='Email' />
 				</div>
 				<div className={styles['field']}>
-					<label htmlFor='password'>Ваш пароль</label>
+					<label htmlFor='password'>
+						<img src='/public/icon/password-icon.svg' alt='password' />
+					</label>
 					<Input
 						id='password'
 						name='password'
@@ -23,7 +27,9 @@ function Register() {
 					/>
 				</div>
 				<div className={styles['field']}>
-					<label htmlFor='name'>Ваше имя</label>
+					<label htmlFor='name'>
+						<img src='/public/icon/user-icon.svg' alt='user name' />
+					</label>
 					<Input id='name' name='name' placeholder='Имя' />
 				</div>
 				<Button>Зарегистрироваться</Button>

@@ -43,6 +43,10 @@ function Menu({ children }: MenuProps) {
 						контакты
 					</NavLink>
 				</li>
+				<li className={styles.link}>
+					<img src='/public/icon/user-icon.svg' alt='user' />
+					<div>username</div>
+				</li>
 			</ul>
 			{children}
 		</nav>
