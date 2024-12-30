@@ -13,7 +13,7 @@ function Main({ items = photodb }: MainProps) {
 		let filteredItems = items;
 
 		if (newValue && newValue !== 'все фотографии') {
-			filteredItems = items.filter(el => el.plenka === newValue);
+			filteredItems = items.filter(el => el.film === newValue);
 		}
 
 		setFilterPhotos(filteredItems);

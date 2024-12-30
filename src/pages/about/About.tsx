@@ -35,25 +35,25 @@ function About() {
 					</Paragraph>
 				</div>
 				<div className={styles['contacts']}>
-					<a href='#'>
+					<a href='https://t.me/yurasidyakin'>
 						<img
 							className={styles['social']}
 							src='/public/icon/telegram-icon.svg'
 							alt='Telergram'
 						/>
 					</a>
-					<a href='#'>
+					<a href='https://vk.com/yurafikys'>
 						<img
 							className={styles['social']}
 							src='/public/icon/vk-icon.svg'
 							alt='VK'
 						/>
 					</a>
-					<a href='#'>
+					<a href='yurafikys@gmail.com'>
 						<img
 							className={styles['social']}
 							src='/public/icon/mail-icon.svg'
-							alt='Mail'
+							alt='Email'
 						/>
 					</a>
 				</div>
