@@ -1,9 +1,9 @@
-import { ChangeEvent, useState } from 'react';
-import MenuList from '../../components/MenuList/MenuList';
-import Select from '../../components/Select/Select';
-import { photodb } from '../../db/photodb';
-import { IPhoto } from '../../interfaces/photo.interface';
-import { MainProps } from './Main.props';
+import { ChangeEvent, useState } from "react";
+import MenuList from "../../components/MenuList/MenuList";
+import Select from "../../components/Select/Select";
+import { photodb } from "../../db/photodb";
+import { IPhoto } from "../../interfaces/photo.interface";
+import { MainProps } from "./Main.props";
 
 function Main({ items = photodb }: MainProps) {
 	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>(items);
@@ -12,8 +12,8 @@ function Main({ items = photodb }: MainProps) {
 		const newValue = event.target.value;
 		let filteredItems = items;
 
-		if (newValue && newValue !== 'все фотографии') {
-			filteredItems = items.filter(el => el.film === newValue);
+		if (newValue && newValue !== "все фотографии") {
+			filteredItems = items.filter((el) => el.film === newValue);
 		}
 
 		setFilterPhotos(filteredItems);

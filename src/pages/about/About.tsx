@@ -1,19 +1,19 @@
-import Headling from '../../components/Headling/Headlig';
-import Paragraph from '../../components/Paragraph/Paragraph';
-import styles from './About.module.css';
+import Headling from "../../components/Headling/Headlig";
+import Paragraph from "../../components/Paragraph/Paragraph";
+import styles from "./About.module.css";
 
 function About() {
 	return (
-		<div className={styles['about']}>
+		<div className={styles["about"]}>
 			<img
-				src='/public/photo/author.png'
-				alt='photo_icon'
-				loading='lazy'
-				className={styles['author']}
+				src="/public/photo/author.png"
+				alt="photo_icon"
+				loading="lazy"
+				className={styles["author"]}
 			/>
-			<div className={styles['content']}>
-				<div className={styles['text']}>
-					<Headling className={styles['title']}>
+			<div className={styles["content"]}>
+				<div className={styles["text"]}>
+					<Headling className={styles["title"]}>
 						Персональный фотоальбом
 						<br />
 						пленочной фотографии
@@ -34,26 +34,26 @@ function About() {
 						придают каждому кадру особую магию.
 					</Paragraph>
 				</div>
-				<div className={styles['contacts']}>
-					<a href='https://t.me/yurasidyakin'>
+				<div className={styles["contacts"]}>
+					<a href="https://t.me/yurasidyakin">
 						<img
-							className={styles['social']}
-							src='/public/icon/telegram-icon.svg'
-							alt='Telergram'
+							className={styles["social"]}
+							src="/public/icon/telegram-icon.svg"
+							alt="Telergram"
 						/>
 					</a>
-					<a href='https://vk.com/yurafikys'>
+					<a href="https://vk.com/yurafikys">
 						<img
-							className={styles['social']}
-							src='/public/icon/vk-icon.svg'
-							alt='VK'
+							className={styles["social"]}
+							src="/public/icon/vk-icon.svg"
+							alt="VK"
 						/>
 					</a>
-					<a href='yurafikys@gmail.com'>
+					<a href="yurafikys@gmail.com">
 						<img
-							className={styles['social']}
-							src='/public/icon/mail-icon.svg'
-							alt='Email'
+							className={styles["social"]}
+							src="/public/icon/mail-icon.svg"
+							alt="Email"
 						/>
 					</a>
 				</div>

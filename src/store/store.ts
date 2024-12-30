@@ -1,6 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
-import favoriteSlice, { FAVORITE_PERSISTENT_STATE } from './favorite.slice';
-import { saveState } from './storage';
+import { configureStore } from "@reduxjs/toolkit";
+import favoriteSlice, { FAVORITE_PERSISTENT_STATE } from "./favorite.slice";
+import { saveState } from "./storage";
 
 export const store = configureStore({
 	reducer: {
