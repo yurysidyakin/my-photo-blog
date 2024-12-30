@@ -43,7 +43,7 @@ function MenuList({ children, items, ...props }: MenuListProps) {
 						<div className={styles.item}>
 							<img
 								className={styles.icon}
-								src='/public/icon/plenka-icon.svg'
+								src='/public/icon/film-icon.svg'
 								alt='plenka-icon'
 							/>
 							{photo.film}

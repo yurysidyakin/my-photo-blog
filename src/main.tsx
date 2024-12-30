@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -14,7 +14,7 @@ import PhotoCard from './pages/PhotoCard/Photo.tsx';
 import Register from './pages/Register/Register.tsx';
 import { store } from './store/store.ts';
 
-const Main = lazy(() => import('./pages/Main/Main.tsx'));
+const Main = React.lazy(() => import('./pages/Main/Main.tsx'));
 
 const router = createBrowserRouter([
 	{
