@@ -40,14 +40,13 @@ function MenuList({ children, items, ...props }: MenuListProps) {
 							/>
 							{photo.camera}
 						</div>
-
 						<div className={styles.item}>
 							<img
 								className={styles.icon}
 								src='/public/icon/plenka-icon.svg'
 								alt='plenka-icon'
 							/>
-							{photo.plenka}
+							{photo.film}
 						</div>
 						<div className={styles.item}>
 							<button

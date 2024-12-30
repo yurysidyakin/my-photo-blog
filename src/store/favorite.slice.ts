@@ -3,7 +3,7 @@ import { IPhoto } from '../interfaces/photo.interface';
 import { loadState } from './storage';
 
 export interface FavoritePhoto extends IPhoto {
-	count: number;
+	count?: number;
 }
 
 export interface FavoriteState {

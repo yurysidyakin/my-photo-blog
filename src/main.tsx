@@ -1,18 +1,18 @@
 import React, { lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Loader from './components/Loader/Loader.tsx';
 import './index.css';
+import AuthLayout from './layout/AuthLayout/AuthLayout.tsx';
 import Layout from './layout/Layout/Layout.tsx';
 import About from './pages/About/About.tsx';
 import Error from './pages/Error/Error.tsx';
 import Favorite from './pages/Favorite/Favorite.tsx';
-import PhotoCard from './pages/PhotoCard/Photo.tsx';
-import { Provider } from 'react-redux';
-import { store } from './store/store.ts';
-import AuthLayout from './layout/AuthLayout/AuthLayout.tsx';
 import Login from './pages/Login/Login.tsx';
+import PhotoCard from './pages/PhotoCard/Photo.tsx';
 import Register from './pages/Register/Register.tsx';
+import { store } from './store/store.ts';
 
 const Main = lazy(() => import('./pages/Main/Main.tsx'));
 

@@ -29,10 +29,10 @@ function Photo({ ...props }: PhotoProps): JSX.Element {
 				<div className={styles['photo_item']}>
 					<img
 						className={styles['icon']}
-						src='/public/icon/plenka-icon.svg'
-						alt=''
+						src='/public/icon/film-icon.svg'
+						alt='film'
 					/>
-					<div>{photo.plenka}</div>
+					<div>{photo.film}</div>
 				</div>
 				<div className={styles['photo_item']}>
 					<img

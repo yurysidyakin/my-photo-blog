@@ -2,7 +2,7 @@ export interface IPhoto {
 	id: number;
 	path: string;
 	camera: string;
-	plenka: string;
+	film: string;
 	location: string;
 	count?: number;
 }

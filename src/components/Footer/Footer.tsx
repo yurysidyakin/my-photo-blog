@@ -11,11 +11,10 @@ function Footer({ children }: FooterProps) {
 					alt='Footer logo'
 				/>
 				<div className={styles['footer-text']}>©2024. All rights reserved.</div>
-				<a href='#'>
+				<a href='https://github.com/fikyslsgg'>
 					<img src='/public/icon/github-icon.svg' alt='Git icon' />
 				</a>
 			</div>
-
 			{children}
 		</footer>
 	);
