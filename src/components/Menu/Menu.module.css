@@ -5,8 +5,14 @@
 
 .list {
 	display: flex;
-	gap: 30px;
+	gap: 10px 30px;
 	align-items: baseline;
+	flex-wrap: wrap;
+}
+
+.list:last-child {
+	width: 100%;
+	justify-content: center;
 }
 
 .item {
