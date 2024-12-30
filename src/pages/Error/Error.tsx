@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router';
-import Paragraph from '../../components/Paragraph/Paragraph';
-import styles from './Error.module.css';
+import { NavLink } from "react-router";
+import Paragraph from "../../components/Paragraph/Paragraph";
+import styles from "./Error.module.css";
 
 function Error() {
 	return (
@@ -10,13 +10,13 @@ function Error() {
 				К сожалению, произошла ошибка. <br />
 				Попробуйте вернуться на главную страницу.
 			</Paragraph>
-			<NavLink to='/' className={styles['back-link']}>
+			<NavLink to="/" className={styles["back-link"]}>
 				Вернуться на главную
 			</NavLink>
 			<img
-				className={styles['error-icon']}
-				src='/public/icon/error-icon.svg'
-				alt='Error'
+				className={styles["error-icon"]}
+				src="/public/icon/error-icon.svg"
+				alt="Error"
 			/>
 		</div>
 	);

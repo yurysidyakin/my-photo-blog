@@ -1,5 +1,5 @@
-import styles from './Loader.module.css';
-import { LoaderProps } from './Loader.props';
+import styles from "./Loader.module.css";
+import { LoaderProps } from "./Loader.props";
 
 function Loader({ children }: LoaderProps) {
 	return (

@@ -1,9 +1,9 @@
-import cn from 'classnames';
-import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { RootState } from '../../store/store';
-import styles from './Menu.module.css';
-import { MenuProps } from './Menu.props';
+import cn from "classnames";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { RootState } from "../../store/store";
+import styles from "./Menu.module.css";
+import { MenuProps } from "./Menu.props";
 
 function Menu({ children }: MenuProps) {
 	const photos = useSelector((s: RootState) => s.favorite.photos);
@@ -18,7 +18,7 @@ function Menu({ children }: MenuProps) {
 								[styles.active]: isActive,
 							})
 						}
-						to='/'
+						to="/"
 					>
 						главная
 					</NavLink>
@@ -30,11 +30,11 @@ function Menu({ children }: MenuProps) {
 								[styles.active]: isActive,
 							})
 						}
-						to='/favorite'
+						to="/favorite"
 					>
 						избранное
 					</NavLink>
-					{photos.length == 0 && ''}
+					{photos.length == 0 && ""}
 					{photos.length !== 0 && (
 						<div className={styles.count}>{photos.length}</div>
 					)}
@@ -46,7 +46,7 @@ function Menu({ children }: MenuProps) {
 								[styles.active]: isActive,
 							})
 						}
-						to='/about'
+						to="/about"
 					>
 						контакты
 					</NavLink>
@@ -54,8 +54,8 @@ function Menu({ children }: MenuProps) {
 				<li className={styles.item}>
 					<img
 						className={styles.icon}
-						src='/public/icon/user-icon.svg'
-						alt='user'
+						src="/public/icon/user-icon.svg"
+						alt="user"
 					/>
 					<div className={styles.name}>username</div>
 				</li>

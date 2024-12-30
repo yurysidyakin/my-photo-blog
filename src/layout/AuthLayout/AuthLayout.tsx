@@ -1,10 +1,10 @@
-import { Outlet } from 'react-router-dom';
-import styles from './AuthLayout.module.css';
-import { AuthLayoutProps } from './AuthLayout.props';
+import { Outlet } from "react-router-dom";
+import styles from "./AuthLayout.module.css";
+import { AuthLayoutProps } from "./AuthLayout.props";
 
 function Layout({ children }: AuthLayoutProps) {
 	return (
-		<div className={styles['auth-layout']}>
+		<div className={styles["auth-layout"]}>
 			<div className={styles.container}>
 				<Outlet />
 				{children}
