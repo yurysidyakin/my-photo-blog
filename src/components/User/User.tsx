@@ -6,7 +6,7 @@ function User({ name = "username", children }: UserProps): JSX.Element {
 		<div className={styles.user}>
 			<img
 				className={styles.icon}
-				src="/public/icon/user-icon.svg"
+				src="/my-photo-blog/public/icon/user-icon.svg"
 				alt="user"
 			/>
 			<div className={styles.name}>{name}</div>

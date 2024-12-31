@@ -13,15 +13,19 @@ function Photo({ children }: PhotoProps): JSX.Element {
 
 	return (
 		<div className={styles["photo-card"]}>
-			<Link to={"/"} className={styles["back"]}>
+			<Link to={"/my-photo-blog"} className={styles["back"]}>
 				назад...
 			</Link>
-			<img className={styles["photo"]} src={photo.path} alt="photo" />
+			<img
+				className={styles["photo"]}
+				src={`/my-photo-blog${photo.path}`}
+				alt="photo"
+			/>
 			<div className={styles["photo_desc"]}>
 				<div className={styles["photo_item"]}>
 					<img
 						className={styles["icon"]}
-						src="/public/icon/camera-icon.svg"
+						src="/my-photo-blog/public/icon/camera-icon.svg"
 						alt="camera"
 					/>
 					<div>{photo.camera}</div>
@@ -29,7 +33,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 				<div className={styles["photo_item"]}>
 					<img
 						className={styles["icon"]}
-						src="/public/icon/film-icon.svg"
+						src="/my-photo-blog/public/icon/film-icon.svg"
 						alt="film"
 					/>
 					<div>{photo.film}</div>
@@ -37,7 +41,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 				<div className={styles["photo_item"]}>
 					<img
 						className={styles["icon"]}
-						src="/public/icon/location-icon.svg"
+						src="/my-photo-blog/public/icon/location-icon.svg"
 						alt="location"
 					/>
 					<div className={styles["photo_text"]}>{photo.location}</div>

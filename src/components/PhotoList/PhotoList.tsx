@@ -23,9 +23,9 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 		<div className={styles.main} {...props}>
 			{items.map((photo) => (
 				<div key={photo.id} className={styles.wrapper}>
-					<NavLink to={`/photo/${photo.id}`}>
+					<NavLink to={`/my-photo-blog/photo/${photo.id}`}>
 						<img
-							src={photo.path}
+							src={`/my-photo-blog/${photo.path}`}
 							alt="photo"
 							loading="lazy"
 							className={styles.photo}
@@ -35,7 +35,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 						<div className={styles.item}>
 							<img
 								className={styles.icon}
-								src="/public/icon/camera-icon.svg"
+								src="my-photo-blog/public/icon/camera-icon.svg"
 								alt="camera-icon"
 							/>
 							{photo.camera}
@@ -43,7 +43,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 						<div className={styles.item}>
 							<img
 								className={styles.icon}
-								src="/public/icon/film-icon.svg"
+								src="my-photo-blog/public/icon/film-icon.svg"
 								alt="plenka-icon"
 							/>
 							{photo.film}

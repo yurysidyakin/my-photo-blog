@@ -18,7 +18,7 @@ function MenuList({ children }: MenuListProps): JSX.Element {
 								[styles.active]: isActive,
 							})
 						}
-						to="/"
+						to="/my-photo-blog"
 					>
 						главная
 					</NavLink>
@@ -30,7 +30,7 @@ function MenuList({ children }: MenuListProps): JSX.Element {
 								[styles.active]: isActive,
 							})
 						}
-						to="/favorite"
+						to="/my-photo-blog/favorite"
 					>
 						избранное
 					</NavLink>
@@ -46,7 +46,7 @@ function MenuList({ children }: MenuListProps): JSX.Element {
 								[styles.active]: isActive,
 							})
 						}
-						to="/about"
+						to="/my-photo-blog/about"
 					>
 						контакты
 					</NavLink>

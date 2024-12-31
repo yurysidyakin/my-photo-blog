@@ -18,12 +18,12 @@ const Main = React.lazy(() => import("./pages/main/Main.tsx"));
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/my-photo-blog",
 		element: <Layout />,
 
 		children: [
 			{
-				path: "/",
+				path: "/my-photo-blog",
 				element: (
 					<Suspense fallback={<Loader />}>
 						<Main />
@@ -31,15 +31,15 @@ const router = createBrowserRouter([
 				),
 			},
 			{
-				path: "/about",
+				path: "/my-photo-blog/about",
 				element: <About />,
 			},
 			{
-				path: "/favorite",
+				path: "/my-photo-blog/favorite",
 				element: <Favorite />,
 			},
 			{
-				path: "/photo/:id",
+				path: "/my-photo-blog/photo/:id",
 				element: <PhotoCard />,
 			},
 			{
@@ -49,15 +49,15 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "/auth",
+		path: "/my-photo-blog/auth",
 		element: <AuthLayout />,
 		children: [
 			{
-				path: "login",
+				path: "/my-photo-blog/auth/login",
 				element: <Login />,
 			},
 			{
-				path: "register",
+				path: "/my-photo-blog/auth/register",
 				element: <Register />,
 			},
 		],

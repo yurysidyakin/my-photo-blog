@@ -7,7 +7,7 @@ function About({ children }: AboutProps): JSX.Element {
 	return (
 		<div className={styles["about"]}>
 			<img
-				src="/public/photo/author.png"
+				src="/my-photo-blog/public/photo/author.png"
 				alt="photo_icon"
 				loading="lazy"
 				className={styles["author"]}
@@ -39,21 +39,21 @@ function About({ children }: AboutProps): JSX.Element {
 					<a href="https://t.me/yurasidyakin">
 						<img
 							className={styles["social"]}
-							src="/public/icon/telegram-icon.svg"
+							src="/my-photo-blog/public/icon/telegram-icon.svg"
 							alt="Telergram"
 						/>
 					</a>
 					<a href="https://vk.com/yurafikys">
 						<img
 							className={styles["social"]}
-							src="/public/icon/vk-icon.svg"
+							src="/my-photo-blog/public/icon/vk-icon.svg"
 							alt="VK"
 						/>
 					</a>
 					<a href="yurafikys@gmail.com">
 						<img
 							className={styles["social"]}
-							src="/public/icon/mail-icon.svg"
+							src="/my-photo-blog/public/icon/mail-icon.svg"
 							alt="Email"
 						/>
 					</a>
