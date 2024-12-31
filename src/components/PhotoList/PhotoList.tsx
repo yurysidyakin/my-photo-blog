@@ -25,7 +25,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 				<div key={photo.id} className={styles.wrapper}>
 					<NavLink to={`/my-photo-blog/photo/${photo.id}`}>
 						<img
-							src={`/my-photo-blog${photo.path}`}
+							src={`https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/refs/heads/main/${photo.path}`}
 							alt="photo"
 							loading="lazy"
 							className={styles.photo}
