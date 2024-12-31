@@ -18,12 +18,12 @@ const Main = React.lazy(() => import("./pages/main/Main.tsx"));
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/my-photo-blog",
 		element: <Layout />,
 
 		children: [
 			{
-				path: "/",
+				path: "/my-photo-blog",
 				element: (
 					<Suspense fallback={<Loader />}>
 						<Main />
