@@ -31,15 +31,15 @@ const router = createBrowserRouter([
 				),
 			},
 			{
-				path: "/about",
+				path: "/my-photo-blog/about",
 				element: <About />,
 			},
 			{
-				path: "/favorite",
+				path: "/my-photo-blog/favorite",
 				element: <Favorite />,
 			},
 			{
-				path: "/photo/:id",
+				path: "/my-photo-blog/photo/:id",
 				element: <PhotoCard />,
 			},
 			{
