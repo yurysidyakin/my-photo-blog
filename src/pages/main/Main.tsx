@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import MenuList from "../../components/MenuList/MenuList";
+import PhotoList from "../../components/PhotoList/PhotoList";
 import Select from "../../components/Select/Select";
 import { photodb } from "../../db/photodb";
 import { IPhoto } from "../../interfaces/photo.interface";
@@ -21,7 +21,7 @@ function Main({ items = photodb }: MainProps) {
 	return (
 		<main>
 			<Select onChange={updateFilter} />
-			<MenuList items={filterPhotos} />
+			<PhotoList items={filterPhotos} />
 		</main>
 	);
 }

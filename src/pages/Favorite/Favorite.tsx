@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import MenuList from "../../components/MenuList/MenuList";
+import PhotoList from "../../components/PhotoList/PhotoList";
 import { RootState } from "../../store/store";
 import styles from "./Favorite.module.css";
 
@@ -8,7 +8,7 @@ function Favorite() {
 
 	return (
 		<section className={styles.favorite}>
-			<MenuList items={photos}></MenuList>
+			<PhotoList items={photos}></PhotoList>
 		</section>
 	);
 }
