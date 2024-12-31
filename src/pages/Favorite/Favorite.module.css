@@ -1,0 +1,13 @@
+.favorite {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-self: flex-start;
+	gap: 30px;
+}
+
+@media screen and (max-width: 600px) {
+	.favorite {
+		justify-self: auto;
+	}
+}

@@ -1,0 +1,22 @@
+.select-wrapper {
+	display: flex;
+	justify-content: end;
+	margin-bottom: 25px;
+}
+
+.select {
+	color: var(--text-color-paragraph);
+	outline: none;
+	border-radius: 5px;
+	font-style: italic;
+}
+
+.option {
+	font-style: italic;
+}
+
+@media screen and (max-width: 468px) {
+	.select-wrapper {
+		justify-content: center;
+	}
+}
