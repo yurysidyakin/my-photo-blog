@@ -1,8 +1,9 @@
 import Headling from "../../components/Headling/Headlig";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import styles from "./About.module.css";
+import { AboutProps } from "./About.props";
 
-function About() {
+function About({ children }: AboutProps): JSX.Element {
 	return (
 		<div className={styles["about"]}>
 			<img
@@ -58,6 +59,7 @@ function About() {
 					</a>
 				</div>
 			</div>
+			{children}
 		</div>
 	);
 }

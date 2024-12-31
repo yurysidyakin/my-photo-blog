@@ -1,11 +1,11 @@
 import { ChangeEvent, useState } from "react";
-import MenuList from "../../components/MenuList/MenuList";
+import PhotoList from "../../components/PhotoList/PhotoList";
 import Select from "../../components/Select/Select";
 import { photodb } from "../../db/photodb";
 import { IPhoto } from "../../interfaces/photo.interface";
 import { MainProps } from "./Main.props";
 
-function Main({ items = photodb }: MainProps) {
+function Main({ items = photodb }: MainProps): JSX.Element {
 	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>(items);
 
 	const updateFilter = (event: ChangeEvent<HTMLSelectElement>) => {
@@ -21,7 +21,7 @@ function Main({ items = photodb }: MainProps) {
 	return (
 		<main>
 			<Select onChange={updateFilter} />
-			<MenuList items={filterPhotos} />
+			<PhotoList items={filterPhotos} />
 		</main>
 	);
 }

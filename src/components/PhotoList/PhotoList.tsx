@@ -4,10 +4,10 @@ import { IPhoto } from "../../interfaces/photo.interface";
 import { favoriteActions } from "../../store/favorite.slice";
 import { AppDispatch, RootState } from "../../store/store";
 import Like from "../Like/Like";
-import styles from "./MenuList.module.css";
-import { MenuListProps } from "./MenuList.props";
+import styles from "./PhotoList.module.css";
+import { PhotoListProps } from "./PhotoList.props";
 
-function MenuList({ children, items, ...props }: MenuListProps) {
+function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 	const dispatch = useDispatch<AppDispatch>();
 
 	const favorites = useSelector((state: RootState) => state.favorite.photos);
@@ -64,4 +64,4 @@ function MenuList({ children, items, ...props }: MenuListProps) {
 	);
 }
 
-export default MenuList;
+export default PhotoList;

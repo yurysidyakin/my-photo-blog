@@ -3,8 +3,9 @@ import Button from "../../components/Button/Button";
 import Headling from "../../components/Headling/Headlig";
 import Input from "../../components/Input/Input";
 import styles from "./Login.module.css";
+import { LoginProps } from "./Login.props";
 
-function Login() {
+function Login({ children }: LoginProps): JSX.Element {
 	return (
 		<div className={styles.login}>
 			<Headling>Вход</Headling>
@@ -32,6 +33,7 @@ function Login() {
 				<div>Нет аккаунта?</div>
 				<Link to="/auth/register">Зарегистрироваться</Link>
 			</div>
+			{children}
 		</div>
 	);
 }

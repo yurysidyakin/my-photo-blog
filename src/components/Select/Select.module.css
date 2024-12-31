@@ -14,3 +14,9 @@
 .option {
 	font-style: italic;
 }
+
+@media screen and (max-width: 468px) {
+	.select-wrapper {
+		justify-content: center;
+	}
+}

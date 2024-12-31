@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-export interface LoaderProps {
+export interface LoaderProps extends HTMLAttributes<HTMLDivElement> {
 	children?: ReactNode;
 }

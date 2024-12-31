@@ -3,7 +3,7 @@ import { photodb } from "../../db/photodb";
 import styles from "./Photo.module.css";
 import { PhotoProps } from "./Photo.props";
 
-function Photo({ ...props }: PhotoProps): JSX.Element {
+function Photo({ children }: PhotoProps): JSX.Element {
 	const { id } = useParams();
 	const photo = photodb.find((photo) => String(photo.id) === id);
 
@@ -12,7 +12,7 @@ function Photo({ ...props }: PhotoProps): JSX.Element {
 	}
 
 	return (
-		<div {...props} className={styles["photo-card"]}>
+		<div className={styles["photo-card"]}>
 			<Link to={"/"} className={styles["back"]}>
 				назад...
 			</Link>
@@ -43,6 +43,7 @@ function Photo({ ...props }: PhotoProps): JSX.Element {
 					<div className={styles["photo_text"]}>{photo.location}</div>
 				</div>
 			</div>
+			{children}
 		</div>
 	);
 }

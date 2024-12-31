@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-export interface LayoutProps {
+export interface LayoutProps extends HTMLAttributes<HTMLDivElement> {
 	children?: ReactNode;
 }

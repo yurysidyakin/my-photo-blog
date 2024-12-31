@@ -1,0 +1,13 @@
+.icon {
+	width: 18px;
+}
+
+.name {
+	color: var(--primary-color);
+}
+
+.user {
+	display: flex;
+	align-items: baseline;
+	gap: 10px;
+}

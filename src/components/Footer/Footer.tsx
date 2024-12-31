@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import { FooterProps } from "./Footer.props";
 
-function Footer({ children }: FooterProps) {
+function Footer({ children }: FooterProps): JSX.Element {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles["footer-content"]}>

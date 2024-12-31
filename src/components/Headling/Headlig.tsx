@@ -1,7 +1,7 @@
 import styles from "./Headling.module.css";
 import { HeadlingProps } from "./Headling.props";
 
-function Headling({ children, ...props }: HeadlingProps) {
+function Headling({ children, ...props }: HeadlingProps): JSX.Element {
 	return (
 		<h1 className={styles["h1"]} {...props}>
 			{children}
