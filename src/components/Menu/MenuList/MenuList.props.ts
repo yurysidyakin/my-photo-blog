@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-export interface MenuListProps {
+export interface MenuListProps extends HTMLAttributes<HTMLDivElement> {
 	children?: ReactNode;
 }

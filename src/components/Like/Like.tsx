@@ -1,7 +1,6 @@
-import { ReactElement } from "react";
 import { LikeProps } from "./Like.props";
 
-function Like({ active }: LikeProps): ReactElement {
+function Like({ active }: LikeProps): JSX.Element {
 	return (
 		<svg width="20.000000" height="18.500000" viewBox="0 0 20 18.5">
 			<path

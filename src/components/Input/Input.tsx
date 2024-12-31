@@ -6,7 +6,7 @@ import { InputProps } from "./Input.props";
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
 	{ className, isValid = true, ...props },
 	ref,
-) {
+): JSX.Element {
 	return (
 		<input
 			{...props}

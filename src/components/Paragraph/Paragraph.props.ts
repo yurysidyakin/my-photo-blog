@@ -1,5 +1,5 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-export interface PProps extends HTMLAttributes<HTMLParagraphElement> {
+export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
 	children: ReactNode;
 }

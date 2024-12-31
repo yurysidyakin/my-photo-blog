@@ -2,7 +2,7 @@ import { ChangeEvent, useState } from "react";
 import styles from "./Select.module.css";
 import { OptionProps, SelectProps } from "./Select.props";
 
-function Select({ children, ...props }: SelectProps) {
+function Select({ children, ...props }: SelectProps): JSX.Element {
 	const [selectedOption, setSelectedOption] = useState<string>("");
 
 	const options: OptionProps[] = [

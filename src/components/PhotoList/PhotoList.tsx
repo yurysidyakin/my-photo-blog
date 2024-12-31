@@ -7,7 +7,7 @@ import Like from "../Like/Like";
 import styles from "./PhotoList.module.css";
 import { PhotoListProps } from "./PhotoList.props";
 
-function PhotoList({ children, items, ...props }: PhotoListProps) {
+function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 	const dispatch = useDispatch<AppDispatch>();
 
 	const favorites = useSelector((state: RootState) => state.favorite.photos);

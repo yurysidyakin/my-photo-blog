@@ -5,7 +5,7 @@ import { photodb } from "../../db/photodb";
 import { IPhoto } from "../../interfaces/photo.interface";
 import { MainProps } from "./Main.props";
 
-function Main({ items = photodb }: MainProps) {
+function Main({ items = photodb }: MainProps): JSX.Element {
 	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>(items);
 
 	const updateFilter = (event: ChangeEvent<HTMLSelectElement>) => {

@@ -1,7 +1,7 @@
 import styles from "./Paragraph.module.css";
-import { PProps } from "./Paragraph.props";
+import { ParagraphProps } from "./Paragraph.props";
 
-function Paragraph({ children, ...props }: PProps) {
+function Paragraph({ children, ...props }: ParagraphProps): JSX.Element {
 	return (
 		<p className={styles["paragraph"]} {...props}>
 			{children}

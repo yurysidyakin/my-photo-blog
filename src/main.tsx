@@ -10,7 +10,7 @@ import About from "./pages/About/About.tsx";
 import Error from "./pages/Error/Error.tsx";
 import Favorite from "./pages/Favorite/Favorite.tsx";
 import Login from "./pages/Login/Login.tsx";
-import PhotoCard from "./pages/PhotoCard/Photo.tsx";
+import PhotoCard from "./pages/Photo/Photo.tsx";
 import Register from "./pages/Register/Register.tsx";
 import { store } from "./store/store.ts";
 

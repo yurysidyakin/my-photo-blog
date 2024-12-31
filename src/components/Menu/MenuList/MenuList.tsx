@@ -5,7 +5,7 @@ import { RootState } from "../../../store/store";
 import styles from "./MenuList.module.css";
 import { MenuListProps } from "./MenuList.props";
 
-function MenuList({ children }: MenuListProps) {
+function MenuList({ children }: MenuListProps): JSX.Element {
 	const photos = useSelector((s: RootState) => s.favorite.photos);
 
 	return (

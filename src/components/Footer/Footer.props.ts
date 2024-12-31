@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-export interface FooterProps {
+export interface FooterProps extends HTMLAttributes<HTMLDivElement> {
 	children?: ReactNode;
 }

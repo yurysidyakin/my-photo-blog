@@ -3,8 +3,9 @@ import Button from "../../components/Button/Button";
 import Headling from "../../components/Headling/Headlig";
 import Input from "../../components/Input/Input";
 import styles from "./Register.module.css";
+import { RegisterProps } from "./Register.props";
 
-function Register() {
+function Register({ children }: RegisterProps): JSX.Element {
 	return (
 		<div className={styles["login"]}>
 			<Headling>Регистрация</Headling>
@@ -38,6 +39,7 @@ function Register() {
 				<div>Есть аккаунт?</div>
 				<Link to="/auth/login">Войти</Link>
 			</div>
+			{children}
 		</div>
 	);
 }

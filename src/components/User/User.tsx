@@ -1,7 +1,7 @@
 import styles from "./User.module.css";
 import { UserProps } from "./User.props";
 
-function User({ name = "username", children }: UserProps) {
+function User({ name = "username", children }: UserProps): JSX.Element {
 	return (
 		<div className={styles.user}>
 			<img

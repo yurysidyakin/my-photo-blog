@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import styles from "./Layout.module.css";
 import { LayoutProps } from "./Layout.props";
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children }: LayoutProps): JSX.Element {
 	return (
 		<div className={styles.layout}>
 			<div className={styles.container}>

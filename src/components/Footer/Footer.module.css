@@ -17,7 +17,8 @@
 }
 
 .footer-text {
-	font-size: 12px;
+	font-size: 14px;
+	cursor: default;
 }
 
 @media screen and (max-width: 430px) {
