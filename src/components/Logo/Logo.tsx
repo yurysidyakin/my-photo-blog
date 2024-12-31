@@ -5,7 +5,7 @@ function Logo({ ...props }: LogoProps): JSX.Element {
 	return (
 		<img
 			{...props}
-			src="dist/icon/logo.svg"
+			src="/public/icon/logo.svg"
 			alt="logo"
 			className={styles.logo}
 		/>
