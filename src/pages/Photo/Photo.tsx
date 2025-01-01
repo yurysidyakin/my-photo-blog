@@ -18,7 +18,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 			</Link>
 			<img
 				className={styles["photo"]}
-				src={`/my-photo-blog${photo.path}`}
+				src={`https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/refs/heads/main/${photo.path}`}
 				alt="photo"
 			/>
 			<div className={styles["photo_desc"]}>

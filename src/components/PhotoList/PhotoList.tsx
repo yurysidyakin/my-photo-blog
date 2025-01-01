@@ -35,7 +35,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 						<div className={styles.item}>
 							<img
 								className={styles.icon}
-								src="/my-photo-blog/public/icon/camera-icon.svg"
+								src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/9ecf9fa5d9f265fcb4f28446c8dda2f0f8e55390/public/icon/camera-icon.svg"
 								alt="camera-icon"
 							/>
 							{photo.camera}
@@ -43,8 +43,8 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 						<div className={styles.item}>
 							<img
 								className={styles.icon}
-								src="/my-photo-blog/public/icon/film-icon.svg"
-								alt="plenka-icon"
+								src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/9ecf9fa5d9f265fcb4f28446c8dda2f0f8e55390/public/icon/film-icon.svg"
+								alt="film-icon"
 							/>
 							{photo.film}
 						</div>
