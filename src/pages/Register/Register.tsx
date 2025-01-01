@@ -12,13 +12,19 @@ function Register({ children }: RegisterProps): JSX.Element {
 			<form className={styles["form"]}>
 				<div className={styles["field"]}>
 					<label htmlFor="email">
-						<img src="/public/icon/email-icon.svg" alt="email" />
+						<img
+							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/email-icon.svg"
+							alt="email"
+						/>
 					</label>
 					<Input id="email" name="email" placeholder="Email" />
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="password">
-						<img src="/public/icon/password-icon.svg" alt="password" />
+						<img
+							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/password-icon.svg"
+							alt="password"
+						/>
 					</label>
 					<Input
 						id="password"
@@ -29,7 +35,10 @@ function Register({ children }: RegisterProps): JSX.Element {
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="name">
-						<img src="/public/icon/user-icon.svg" alt="user name" />
+						<img
+							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/user-icon.svg"
+							alt="user name"
+						/>
 					</label>
 					<Input id="name" name="name" placeholder="Имя" />
 				</div>

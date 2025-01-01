@@ -7,7 +7,7 @@ function About({ children }: AboutProps): JSX.Element {
 	return (
 		<div className={styles["about"]}>
 			<img
-				src="/my-photo-blog/public/photo/author.png"
+				src="https://github.com/fikyslsgg/my-photo-blog/blob/main/public/photo/author.png?raw=true"
 				alt="photo_icon"
 				loading="lazy"
 				className={styles["author"]}
@@ -39,21 +39,21 @@ function About({ children }: AboutProps): JSX.Element {
 					<a href="https://t.me/yurasidyakin">
 						<img
 							className={styles["social"]}
-							src="/my-photo-blog/public/icon/telegram-icon.svg"
+							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/telegram-icon.svg"
 							alt="Telergram"
 						/>
 					</a>
 					<a href="https://vk.com/yurafikys">
 						<img
 							className={styles["social"]}
-							src="/my-photo-blog/public/icon/vk-icon.svg"
+							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/vk-icon.svg"
 							alt="VK"
 						/>
 					</a>
 					<a href="yurafikys@gmail.com">
 						<img
 							className={styles["social"]}
-							src="/my-photo-blog/public/icon/mail-icon.svg"
+							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/mail-icon.svg"
 							alt="Email"
 						/>
 					</a>
