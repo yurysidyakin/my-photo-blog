@@ -7,7 +7,7 @@ function Footer({ children }: FooterProps): JSX.Element {
 			<div className={styles["footer-content"]}>
 				<img
 					className={styles["footer-logo"]}
-					src="/my-photo-blog/public/icon/logo-footer.svg"
+					src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/a7661804473461a9b0db5961557ee891adf31754/public/icon/logo-footer.svg"
 					alt="Footer logo"
 				/>
 				<div className={styles["footer-text"]}>
@@ -15,7 +15,7 @@ function Footer({ children }: FooterProps): JSX.Element {
 				</div>
 				<a href="https://github.com/fikyslsgg">
 					<img
-						src="/my-photo-blog/public/icon/github-icon.svg"
+						src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/a7661804473461a9b0db5961557ee891adf31754/public/icon/github-icon.svg"
 						alt="Git icon"
 					/>
 				</a>
