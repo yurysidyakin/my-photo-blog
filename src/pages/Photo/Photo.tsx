@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { photodb } from "../../db/photodb";
 import styles from "./Photo.module.css";
 import { PhotoProps } from "./Photo.props";
@@ -13,9 +13,6 @@ function Photo({ children }: PhotoProps): JSX.Element {
 
 	return (
 		<div className={styles["photo-card"]}>
-			<Link to={"/my-photo-blog"} className={styles["back"]}>
-				назад...
-			</Link>
 			<img
 				className={styles["photo"]}
 				src={`https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/refs/heads/main/${photo.path}`}
