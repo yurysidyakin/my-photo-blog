@@ -16,7 +16,7 @@ function Error({ children }: ErrorProps): JSX.Element {
 			</NavLink>
 			<img
 				className={styles["error-icon"]}
-				src="/public/icon/error-icon.svg"
+				src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/error-icon.svg"
 				alt="Error"
 			/>
 			{children}
