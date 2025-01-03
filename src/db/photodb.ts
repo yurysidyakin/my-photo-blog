@@ -6,6 +6,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo1.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
@@ -13,6 +14,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo2.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
@@ -20,6 +22,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo3.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
@@ -27,6 +30,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo4.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok, Russky Island",
 	},
 	{
@@ -34,6 +38,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo5.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok, Russky Island",
 	},
 	{
@@ -41,6 +46,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo6.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok, Tokarevsky lighthouse",
 	},
 	{
@@ -48,6 +54,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo7.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok, Glass Bay",
 	},
 	{
@@ -55,6 +62,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo8.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok, Russky Island",
 	},
 	{
@@ -62,6 +70,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo9.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok, Russky Island",
 	},
 	{
@@ -69,6 +78,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo10.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk",
 	},
 	{
@@ -76,6 +86,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo11.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk",
 	},
 	{
@@ -83,6 +94,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo12.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk",
 	},
 	{
@@ -90,6 +102,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo13.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk",
 	},
 	{
@@ -97,6 +110,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo14.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk",
 	},
 	{
@@ -104,6 +118,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo15.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Saint Petersburg",
 	},
 	{
@@ -111,6 +126,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo16.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Saint Petersburg",
 	},
 	{
@@ -118,6 +134,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo17.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Saint Petersburg",
 	},
 	{
@@ -125,6 +142,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo18.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Saint Petersburg",
 	},
 	{
@@ -132,6 +150,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo19.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
@@ -139,6 +158,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo20.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
+		lens: "Helios-44-2",
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
@@ -146,6 +166,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo21.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok",
 	},
 	{
@@ -153,6 +174,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo22.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
+		lens: "Helios-44-2",
 		location: "Vladivostok",
 	},
 	{
@@ -160,6 +182,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo23.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Saint Petersburg",
 	},
 	{
@@ -167,6 +190,7 @@ export const photodb: IPhoto[] = [
 		path: "/src/db/photos/photo24.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
+		lens: "Helios-44-2",
 		location: "Saint Petersburg",
 	},
 ];
