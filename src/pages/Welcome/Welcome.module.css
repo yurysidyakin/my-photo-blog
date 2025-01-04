@@ -1,0 +1,60 @@
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.animation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	justify-content: center;
+	gap: 30px;
+	text-align: center;
+	-webkit-animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+		both;
+	animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+@keyframes animation {
+	0% {
+		letter-spacing: -0.5em;
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+@keyframes focus-in-expand {
+	0% {
+		letter-spacing: -0.5em;
+		-webkit-filter: blur(12px);
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.welcome-logo,
+	.welcome-icon {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 468px) {
+	.welcome-logo,
+	.welcome-icon {
+		width: 50%;
+	}
+}
