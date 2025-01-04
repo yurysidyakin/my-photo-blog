@@ -12,6 +12,7 @@ import Favorite from "./pages/Favorite/Favorite.tsx";
 import Login from "./pages/Login/Login.tsx";
 import PhotoCard from "./pages/Photo/Photo.tsx";
 import Register from "./pages/Register/Register.tsx";
+import Welcome from "./pages/Welcome/Welcome.tsx";
 import { store } from "./store/store.ts";
 
 const Main = React.lazy(() => import("./pages/main/Main.tsx"));
@@ -24,6 +25,14 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/my-photo-blog",
+				element: (
+					<Suspense fallback={<Loader />}>
+						<Welcome />
+					</Suspense>
+				),
+			},
+			{
+				path: "/my-photo-blog/main",
 				element: (
 					<Suspense fallback={<Loader />}>
 						<Main />

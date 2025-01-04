@@ -18,7 +18,7 @@ function MenuList({ children }: MenuListProps): JSX.Element {
 								[styles.active]: isActive,
 							})
 						}
-						to="/my-photo-blog"
+						to="/my-photo-blog/main"
 					>
 						главная
 					</NavLink>
