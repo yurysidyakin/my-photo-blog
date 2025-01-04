@@ -30,7 +30,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 				<div className={styles["photo_item"]}>
 					<img
 						className={styles["icon"]}
-						src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/film-icon.svg"
+						src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/d481911a18489a77f96195f34f3f6bcd967edceb/public/icon/film-icon.svg"
 						alt="film"
 					/>
 					<div>{photo.film}</div>
