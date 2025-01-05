@@ -1,6 +1,7 @@
 .about {
 	display: flex;
 	gap: 50px;
+	padding-top: 45px;
 }
 
 .content {
