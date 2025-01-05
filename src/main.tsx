@@ -6,7 +6,7 @@ import Loader from "./components/Loader/Loader.tsx";
 import "./index.css";
 import AuthLayout from "./layout/AuthLayout/AuthLayout.tsx";
 import Layout from "./layout/Layout/Layout.tsx";
-import About from "./pages/About/About.tsx";
+import About from "./pages/about/About.tsx";
 import Error from "./pages/Error/Error.tsx";
 import Favorite from "./pages/Favorite/Favorite.tsx";
 import Login from "./pages/Login/Login.tsx";
@@ -15,7 +15,7 @@ import Register from "./pages/Register/Register.tsx";
 import Welcome from "./pages/Welcome/Welcome.tsx";
 import { store } from "./store/store.ts";
 
-const Main = React.lazy(() => import("./pages/Main/Main.tsx"));
+const Main = React.lazy(() => import("./pages/main/Main.tsx"));
 
 const router = createBrowserRouter([
 	{
