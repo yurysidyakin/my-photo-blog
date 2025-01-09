@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
-import Headling from "../../components/Headling/Headlig";
+import Headling from "../../components/Headling/Headling";
 import Input from "../../components/Input/Input";
 import styles from "./Login.module.css";
 import { LoginProps } from "./Login.props";
@@ -20,12 +20,7 @@ function Login({ children }: LoginProps): JSX.Element {
 					<label htmlFor="password">
 						<img src="/public/icon/password-icon.svg" alt="password" />
 					</label>
-					<Input
-						id="password"
-						name="password"
-						type="password"
-						placeholder="Пароль"
-					/>
+					<Input id="password" name="password" type="password" placeholder="Пароль" />
 				</div>
 				<Button>вход</Button>
 			</form>
