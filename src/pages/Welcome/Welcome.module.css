@@ -13,8 +13,7 @@
 	justify-content: center;
 	gap: 30px;
 	text-align: center;
-	-webkit-animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
-		both;
+	-webkit-animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 	animation: focus-in-expand 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
 }
 
