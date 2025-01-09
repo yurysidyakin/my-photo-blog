@@ -13,8 +13,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 
 	const favorites = useSelector((state: RootState) => state.favorite.photos);
 
-	const isFavorite = (id: number) =>
-		favorites.some((photo: IPhoto) => photo.id === id);
+	const isFavorite = (id: number) => favorites.some((photo: IPhoto) => photo.id === id);
 
 	const toggle = (photo: IPhoto) => {
 		dispatch(favoriteActions.toggle(photo));
@@ -50,10 +49,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 							{photo.film}
 						</div>
 						<div className={styles.item}>
-							<button
-								className={styles["button-like"]}
-								onClick={() => toggle(photo)}
-							>
+							<button className={styles["button-like"]} onClick={() => toggle(photo)}>
 								<Like active={isFavorite(photo.id)} />
 							</button>
 						</div>

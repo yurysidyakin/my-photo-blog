@@ -27,6 +27,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	width: 100%;
+	cursor: default;
 }
 
 .photo_item {

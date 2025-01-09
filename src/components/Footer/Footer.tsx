@@ -11,9 +11,7 @@ function Footer({ children }: FooterProps): JSX.Element {
 					src={`${BASE_URL}/a7661804473461a9b0db5961557ee891adf31754/public/icon/logo-footer.svg`}
 					alt="Footer logo"
 				/>
-				<div className={styles["footer-text"]}>
-					©2024. All rights reserved.
-				</div>
+				<div className={styles["footer-text"]}>©2024. All rights reserved.</div>
 				<a href="https://github.com/fikyslsgg">
 					<img
 						src={`${BASE_URL}/a7661804473461a9b0db5961557ee891adf31754/public/icon/github-icon.svg`}
