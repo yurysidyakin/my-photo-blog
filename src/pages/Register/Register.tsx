@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../../api/api";
 import Button from "../../components/Button/Button";
-import Headling from "../../components/Headling/Headlig";
+import Headling from "../../components/Headling/Headling";
 import Input from "../../components/Input/Input";
 import styles from "./Register.module.css";
 import { RegisterProps } from "./Register.props";
@@ -13,7 +14,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 				<div className={styles["field"]}>
 					<label htmlFor="email">
 						<img
-							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/email-icon.svg"
+							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/email-icon.svg `}
 							alt="email"
 						/>
 					</label>
@@ -22,21 +23,16 @@ function Register({ children }: RegisterProps): JSX.Element {
 				<div className={styles["field"]}>
 					<label htmlFor="password">
 						<img
-							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/password-icon.svg"
+							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/password-icon.svg`}
 							alt="password"
 						/>
 					</label>
-					<Input
-						id="password"
-						name="password"
-						type="password"
-						placeholder="Пароль"
-					/>
+					<Input id="password" name="password" type="password" placeholder="Пароль" />
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="name">
 						<img
-							src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/user-icon.svg"
+							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/user-icon.svg`}
 							alt="user name"
 						/>
 					</label>

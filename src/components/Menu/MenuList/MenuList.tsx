@@ -35,9 +35,7 @@ function MenuList({ children }: MenuListProps): JSX.Element {
 						избранное
 					</NavLink>
 					{photos.length == 0 && ""}
-					{photos.length !== 0 && (
-						<div className={styles.count}>{photos.length}</div>
-					)}
+					{photos.length !== 0 && <div className={styles.count}>{photos.length}</div>}
 				</li>
 				<li>
 					<NavLink

@@ -12,9 +12,7 @@ export interface FavoriteState {
 
 export const FAVORITE_PERSISTENT_STATE = "favoritePhotosData";
 
-const initialState: FavoriteState = loadState<FavoriteState>(
-	FAVORITE_PERSISTENT_STATE,
-) ?? {
+const initialState: FavoriteState = loadState<FavoriteState>(FAVORITE_PERSISTENT_STATE) ?? {
 	photos: [],
 };
 
@@ -23,9 +21,7 @@ export const favoriteSlice = createSlice({
 	initialState,
 	reducers: {
 		toggle: (state, action: PayloadAction<FavoritePhoto>) => {
-			const existingPhotoIndex = state.photos.findIndex(
-				(photo) => photo.id === action.payload.id,
-			);
+			const existingPhotoIndex = state.photos.findIndex((photo) => photo.id === action.payload.id);
 
 			if (existingPhotoIndex === -1) {
 				state.photos.push(action.payload);
