@@ -18,7 +18,7 @@ function Error({ children }: ErrorProps): JSX.Element {
 			<img
 				className={styles["error-icon"]}
 				src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/error-icon.svg`}
-				alt="Error"
+				alt="error-icon"
 			/>
 			{children}
 		</div>
