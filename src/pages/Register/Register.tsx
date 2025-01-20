@@ -15,7 +15,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 					<label htmlFor="email">
 						<img
 							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/email-icon.svg `}
-							alt="email"
+							alt="email-icon"
 						/>
 					</label>
 					<Input id="email" name="email" placeholder="Email" />
@@ -24,7 +24,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 					<label htmlFor="password">
 						<img
 							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/password-icon.svg`}
-							alt="password"
+							alt="password-icon"
 						/>
 					</label>
 					<Input id="password" name="password" type="password" placeholder="Пароль" />
@@ -33,7 +33,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 					<label htmlFor="name">
 						<img
 							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/user-icon.svg`}
-							alt="user name"
+							alt="user-icon"
 						/>
 					</label>
 					<Input id="name" name="name" placeholder="Имя" />

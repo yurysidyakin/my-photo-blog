@@ -6,7 +6,7 @@ function Logo({ ...props }: LogoProps): JSX.Element {
 		<img
 			{...props}
 			src="https://raw.githubusercontent.com/fikyslsgg/my-photo-blog/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/logo.svg"
-			alt="logo"
+			alt="logo-icon"
 			className={styles.logo}
 		/>
 	);
