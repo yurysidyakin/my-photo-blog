@@ -24,7 +24,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 					<img
 						className={styles["icon"]}
 						src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/camera-icon.svg`}
-						alt="camera"
+						alt="camera-icon"
 					/>
 					<div>{photo.camera}</div>
 				</div>
@@ -32,7 +32,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 					<img
 						className={styles["icon"]}
 						src={`${BASE_URL}/d481911a18489a77f96195f34f3f6bcd967edceb/public/icon/film-icon.svg`}
-						alt="film"
+						alt="film-icon"
 					/>
 					<div>{photo.film}</div>
 				</div>
@@ -40,7 +40,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 					<img
 						className={styles["icon"]}
 						src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/location-icon.svg`}
-						alt="location"
+						alt="location-icon"
 					/>
 					<div className={styles["photo_text"]}>{photo.location}</div>
 				</div>
@@ -48,7 +48,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 					<img
 						className={styles["icon"]}
 						src={`${BASE_URL}/d481911a18489a77f96195f34f3f6bcd967edceb/public/icon/lens-icon.svg`}
-						alt="lens"
+						alt="lens-icon"
 					/>
 					<div className={styles["photo_text"]}>{photo.lens}</div>
 				</div>
