@@ -19,7 +19,7 @@ function Select({ children, ...props }: SelectProps): JSX.Element {
 	return (
 		<div className={styles["select-wrapper"]}>
 			<select className={styles.select} value={selectedOption} onChange={handleChange} {...props}>
-				<option value="" disabled selected hidden>
+				<option value="" disabled hidden>
 					выберите плёнку...
 				</option>
 				{options.map(({ value, label }) => (

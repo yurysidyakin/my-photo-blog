@@ -14,11 +14,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 
 	return (
 		<div className={styles["photo-card"]}>
-			<img
-				className={styles["photo"]}
-				src={`${BASE_URL}/refs/heads/main/${photo.path}`}
-				alt="photo"
-			/>
+			<img className={styles["photo"]} src={`${BASE_URL}main/${photo.path}`} alt="photo" />
 			<div className={styles["photo_desc"]}>
 				<div className={styles["photo_item"]}>
 					<img

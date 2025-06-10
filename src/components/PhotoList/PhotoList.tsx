@@ -22,10 +22,14 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 	return (
 		<div className={styles.main} {...props}>
 			{items.map((photo) => (
-				<div key={photo.id} className={styles.wrapper}>
-					<NavLink to={`/my-photo-blog/photo/${photo.id}`}>
+				<div key={photo.id || photo._id} className={styles.wrapper}>
+					<NavLink to={`/my-photo-blog/photo/${String(photo.id || photo._id)}`}>
 						<img
-							src={`${BASE_URL}/refs/heads/main/${photo.path}`}
+							src={
+								String(photo.path).startsWith("http")
+									? String(photo.path)
+									: `${BASE_URL}/${String(photo.path).replace(/^\/+/, "")}`
+							}
 							alt="photo"
 							loading="lazy"
 							className={styles.photo}
@@ -50,7 +54,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 						</div>
 						<div className={styles.item}>
 							<button className={styles["button-like"]} onClick={() => toggle(photo)}>
-								<Like active={isFavorite(photo.id)} />
+								<Like active={isFavorite(Number(photo.id || photo._id))} />
 							</button>
 						</div>
 					</div>

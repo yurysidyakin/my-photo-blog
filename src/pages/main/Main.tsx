@@ -1,23 +1,37 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
+import { fetchPhotos } from "../../api/api";
 import PhotoList from "../../components/PhotoList/PhotoList";
 import Select from "../../components/Select/Select";
-import { photodb } from "../../db/photodb";
 import { IPhoto } from "../../interfaces/photo.interface";
-import { MainProps } from "./Main.props";
 
-function Main({ items = photodb }: MainProps): JSX.Element {
-	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>(items);
+function Main(): JSX.Element {
+	const [photos, setPhotos] = useState<IPhoto[]>([]);
+	const [filterPhotos, setFilterPhotos] = useState<IPhoto[]>([]);
+
+	useEffect(() => {
+		const loadPhotos = async () => {
+			try {
+				const data = await fetchPhotos();
+				setPhotos(data);
+				setFilterPhotos(data);
+			} catch (error) {
+				console.error("Failed to load photos:", error);
+			}
+		};
+		loadPhotos();
+	}, []);
 
 	const updateFilter = (event: ChangeEvent<HTMLSelectElement>) => {
 		const newValue = event.target.value;
-		let filteredItems = items;
+		let filteredItems = photos;
 
 		if (newValue && newValue !== "все фотографии") {
-			filteredItems = items.filter((el) => el.film === newValue);
+			filteredItems = photos.filter((el) => el.film === newValue);
 		}
 
 		setFilterPhotos(filteredItems);
 	};
+
 	return (
 		<main>
 			<Select onChange={updateFilter} />

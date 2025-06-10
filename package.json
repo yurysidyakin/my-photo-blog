@@ -14,7 +14,7 @@
 	"dependencies": {
 		"-": "^0.0.1",
 		"@reduxjs/toolkit": "^2.5.0",
-		"axios": "^1.7.9",
+		"axios": "^1.9.0",
 		"classnames": "^2.5.1",
 		"D": "^1.0.0",
 		"husky": "^9.1.7",
