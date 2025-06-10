@@ -1,4 +1,4 @@
-import { BASE_URL } from "../../api/api";
+import { api } from "../../api/api";
 import Headling from "../../components/Headling/Headling";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import styles from "./About.module.css";
@@ -38,21 +38,21 @@ function About({ children }: AboutProps): JSX.Element {
 					<a href="https://t.me/yurasidyakin">
 						<img
 							className={styles["social"]}
-							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/telegram-icon.svg`}
+							src={`${api}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/telegram-icon.svg`}
 							alt="telegram-icon"
 						/>
 					</a>
 					<a href="https://vk.com/yurafikys">
 						<img
 							className={styles["social"]}
-							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/vk-icon.svg`}
+							src={`${api}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/vk-icon.svg`}
 							alt="vk-icon"
 						/>
 					</a>
 					<a href="yurafikys@gmail.com">
 						<img
 							className={styles["social"]}
-							src={`${BASE_URL}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/mail-icon.svg`}
+							src={`${api}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/mail-icon.svg`}
 							alt="email-icon"
 						/>
 					</a>

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router";
-import { BASE_URL } from "../../api/api";
+import { api } from "../../api/api";
 import { IPhoto } from "../../interfaces/photo.interface";
 import { favoriteActions } from "../../store/favorite.slice";
 import { AppDispatch, RootState } from "../../store/store";
@@ -28,7 +28,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 							src={
 								String(photo.path).startsWith("http")
 									? String(photo.path)
-									: `${BASE_URL}/${String(photo.path).replace(/^\/+/, "")}`
+									: `${api}/${String(photo.path).replace(/^\/+/, "")}`
 							}
 							alt="photo"
 							loading="lazy"
@@ -37,19 +37,11 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 					</NavLink>
 					<div className={styles.desc}>
 						<div className={styles.item}>
-							<img
-								className={styles.icon}
-								src={`${BASE_URL}/9ecf9fa5d9f265fcb4f28446c8dda2f0f8e55390/public/icon/camera-icon.svg`}
-								alt="camera-icon"
-							/>
+							<img className={styles.icon} src="/icon/camera-icon.svg" alt="camera-icon" />
 							{photo.camera}
 						</div>
 						<div className={styles.item}>
-							<img
-								className={styles.icon}
-								src={`${BASE_URL}/d481911a18489a77f96195f34f3f6bcd967edceb/public/icon/film-icon.svg`}
-								alt="film-icon"
-							/>
+							<img className={styles.icon} src="/icon/film-icon.svg" alt="film-icon" />
 							{photo.film}
 						</div>
 						<div className={styles.item}>

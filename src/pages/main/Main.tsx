@@ -15,7 +15,7 @@ function Main(): JSX.Element {
 				setPhotos(data);
 				setFilterPhotos(data);
 			} catch (error) {
-				console.error("Failed to load photos:", error);
+				console.error("Ошибка загрузки фотографий:", error);
 			}
 		};
 		loadPhotos();
