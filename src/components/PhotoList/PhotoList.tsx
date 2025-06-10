@@ -37,11 +37,11 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 					</NavLink>
 					<div className={styles.desc}>
 						<div className={styles.item}>
-							<img className={styles.icon} src="/icon/camera-icon.svg" alt="camera-icon" />
+							<img className={styles.icon} src="/icons/camera-icon.svg" alt="camera-icon" />
 							{photo.camera}
 						</div>
 						<div className={styles.item}>
-							<img className={styles.icon} src="/icon/film-icon.svg" alt="film-icon" />
+							<img className={styles.icon} src="/icons/film-icon.svg" alt="film-icon" />
 							{photo.film}
 						</div>
 						<div className={styles.item}>

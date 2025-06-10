@@ -3,7 +3,6 @@ import { api } from "../../api/api";
 import { photodb } from "../../db/photodb";
 import styles from "./Photo.module.css";
 import { PhotoProps } from "./Photo.props";
-import CameraIcon from "/icons/camera-icon.svg";
 
 function Photo({ children }: PhotoProps): JSX.Element {
 	const { id } = useParams();
@@ -17,7 +16,7 @@ function Photo({ children }: PhotoProps): JSX.Element {
 			<img className={styles["photo"]} src={`${api}main/${photo.path}`} alt="photo" />
 			<div className={styles["photo_desc"]}>
 				<div className={styles["photo_item"]}>
-					<img className={styles["icon"]} src={CameraIcon} alt="camera-icon" />
+					<img className={styles["icon"]} src="public/icons/camera-icon.svg" alt="camera-icon" />
 					<div>{photo.camera}</div>
 				</div>
 				<div className={styles["photo_item"]}>
