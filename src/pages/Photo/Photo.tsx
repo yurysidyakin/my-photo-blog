@@ -1,38 +1,58 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { api } from "../../api/api";
-import { photodb } from "../../db/photodb";
+import { api, fetchPhotos } from "../../api/api";
+import { IPhoto } from "../../interfaces/photo.interface";
 import styles from "./Photo.module.css";
 import { PhotoProps } from "./Photo.props";
 
 function Photo({ children }: PhotoProps): JSX.Element {
 	const { id } = useParams();
-	const photo = photodb.find((photo) => String(photo._id) === id);
+	const [photo, setPhoto] = useState<IPhoto | null>(null);
+
+	useEffect(() => {
+		const loadPhoto = async () => {
+			try {
+				const photos = await fetchPhotos();
+				const foundPhoto = photos.find((p) => p._id === id);
+				setPhoto(foundPhoto || null);
+			} catch (error) {
+				console.error("Ошибка загрузки фотографии:", error);
+				setPhoto(null);
+			}
+		};
+		loadPhoto();
+	}, [id]);
 
 	if (!photo) {
 		return <div>Фотография не найдена</div>;
 	}
+
 	return (
 		<div className={styles["photo-card"]}>
-			<img className={styles["photo"]} src={`${api}main/${photo.path}`} alt="photo" />
+			<img
+				className={styles["photo"]}
+				src={
+					String(photo.path).startsWith("http")
+						? String(photo.path)
+						: `${api}/${String(photo.path).replace(/^\/+/, "")}`
+				}
+				alt="photo"
+			/>
 			<div className={styles["photo_desc"]}>
 				<div className={styles["photo_item"]}>
-					<img className={styles["icon"]} src="public/icons/camera-icon.svg" alt="camera-icon" />
+					<img className={styles["icon"]} src="/icons/camera-icon.svg" alt="camera-icon" />
 					<div>{photo.camera}</div>
 				</div>
 				<div className={styles["photo_item"]}>
-					<img className={styles["icon"]} src="public/icons/film-icon.svg" alt="film-icon" />
+					<img className={styles["icon"]} src="/icons/film-icon.svg" alt="film-icon" />
 					<div>{photo.film}</div>
 				</div>
 				<div className={styles["photo_item"]}>
-					<img
-						className={styles["icon"]}
-						src="public/icons/location-icon.svg"
-						alt="location-icon"
-					/>
+					<img className={styles["icon"]} src="/icons/location-icon.svg" alt="location-icon" />
 					<div className={styles["photo_text"]}>{photo.location}</div>
 				</div>
 				<div className={styles["photo_item"]}>
-					<img className={styles["icon"]} src="public/icons/lens-icon.svg" alt="lens-icon" />
+					<img className={styles["icon"]} src="/icons/lens-icon.svg" alt="lens-icon" />
 					<div className={styles["photo_text"]}>{photo.lens}</div>
 				</div>
 			</div>

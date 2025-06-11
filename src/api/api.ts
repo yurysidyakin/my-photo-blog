@@ -1,8 +1,10 @@
 import axios, { AxiosInstance } from "axios";
 import { IPhoto } from "../interfaces/photo.interface";
 
+export const API_URL = "http://localhost:3000/api";
+
 export const api: AxiosInstance = axios.create({
-	baseURL: "http://localhost:3000/api",
+	baseURL: API_URL,
 });
 
 export const fetchPhotos = async (): Promise<IPhoto[]> => {

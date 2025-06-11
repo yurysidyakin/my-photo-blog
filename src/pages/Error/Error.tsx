@@ -12,7 +12,7 @@ function Error({ children }: ErrorProps): JSX.Element {
 				К сожалению, произошла ошибка. <br />
 				Попробуйте вернуться на главную страницу.
 			</Paragraph>
-			<NavLink to="/my-photo-blog/main" className={styles["back-link"]}>
+			<NavLink to="/main" className={styles["back-link"]}>
 				Вернуться на главную
 			</NavLink>
 			<img

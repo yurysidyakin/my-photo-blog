@@ -2,13 +2,15 @@ import { IPhoto } from "../interfaces/photo.interface";
 
 export const photodb: IPhoto[] = [
 	{
+		_id: "1",
 		path: "/src/db/photos/photo1.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
 		lens: "Helios-44-2",
-		location: "Arkhangelsk, Malye Korely",
+		location: "Arkhangelsk",
 	},
 	{
+		_id: "2",
 		path: "/src/db/photos/photo2.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
@@ -16,6 +18,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
+		_id: "3",
 		path: "/src/db/photos/photo3.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
@@ -23,6 +26,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
+		_id: "4",
 		path: "/src/db/photos/photo4.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -30,6 +34,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok, Russky Island",
 	},
 	{
+		_id: "5",
 		path: "/src/db/photos/photo5.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -37,6 +42,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok, Russky Island",
 	},
 	{
+		_id: "6",
 		path: "/src/db/photos/photo6.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -44,6 +50,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok, Tokarevsky lighthouse",
 	},
 	{
+		_id: "7",
 		path: "/src/db/photos/photo7.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -51,6 +58,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok, Glass Bay",
 	},
 	{
+		_id: "8",
 		path: "/src/db/photos/photo8.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -58,6 +66,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok, Russky Island",
 	},
 	{
+		_id: "9",
 		path: "/src/db/photos/photo9.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -65,6 +74,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok, Russky Island",
 	},
 	{
+		_id: "10",
 		path: "/src/db/photos/photo10.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -72,6 +82,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk",
 	},
 	{
+		_id: "11",
 		path: "/src/db/photos/photo11.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -79,6 +90,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk",
 	},
 	{
+		_id: "12",
 		path: "/src/db/photos/photo12.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -86,6 +98,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk",
 	},
 	{
+		_id: "13",
 		path: "/src/db/photos/photo13.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -93,6 +106,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk",
 	},
 	{
+		_id: "14",
 		path: "/src/db/photos/photo14.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -100,6 +114,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk",
 	},
 	{
+		_id: "15",
 		path: "/src/db/photos/photo15.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -107,6 +122,7 @@ export const photodb: IPhoto[] = [
 		location: "Saint Petersburg",
 	},
 	{
+		_id: "16",
 		path: "/src/db/photos/photo16.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -114,6 +130,7 @@ export const photodb: IPhoto[] = [
 		location: "Saint Petersburg",
 	},
 	{
+		_id: "17",
 		path: "/src/db/photos/photo17.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -121,6 +138,7 @@ export const photodb: IPhoto[] = [
 		location: "Saint Petersburg",
 	},
 	{
+		_id: "18",
 		path: "/src/db/photos/photo18.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -128,6 +146,7 @@ export const photodb: IPhoto[] = [
 		location: "Saint Petersburg",
 	},
 	{
+		_id: "19",
 		path: "/src/db/photos/photo19.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
@@ -135,6 +154,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
+		_id: "20",
 		path: "/src/db/photos/photo20.jpeg",
 		camera: "Praktica L",
 		film: "Hitchcock 250",
@@ -142,6 +162,7 @@ export const photodb: IPhoto[] = [
 		location: "Arkhangelsk, Malye Korely",
 	},
 	{
+		_id: "21",
 		path: "/src/db/photos/photo21.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -149,6 +170,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok",
 	},
 	{
+		_id: "22",
 		path: "/src/db/photos/photo22.jpeg",
 		camera: "Praktica L",
 		film: "Kodak Vision 500",
@@ -156,6 +178,7 @@ export const photodb: IPhoto[] = [
 		location: "Vladivostok",
 	},
 	{
+		_id: "23",
 		path: "/src/db/photos/photo23.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",
@@ -163,6 +186,7 @@ export const photodb: IPhoto[] = [
 		location: "Saint Petersburg",
 	},
 	{
+		_id: "24",
 		path: "/src/db/photos/photo24.jpeg",
 		camera: "Praktica L",
 		film: "Tasma 100",

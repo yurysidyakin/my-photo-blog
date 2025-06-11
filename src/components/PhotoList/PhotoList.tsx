@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router";
-import { api } from "../../api/api";
+import { NavLink } from "react-router-dom";
+import { API_URL } from "../../api/api";
 import { IPhoto } from "../../interfaces/photo.interface";
 import { favoriteActions } from "../../store/favorite.slice";
 import { AppDispatch, RootState } from "../../store/store";
@@ -13,7 +13,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 
 	const favorites = useSelector((state: RootState) => state.favorite.photos);
 
-	const isFavorite = (id: number) => favorites.some((photo: IPhoto) => photo.id === id);
+	const isFavorite = (_id: string) => favorites.some((photo: IPhoto) => photo._id === _id);
 
 	const toggle = (photo: IPhoto) => {
 		dispatch(favoriteActions.toggle(photo));
@@ -22,13 +22,13 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 	return (
 		<div className={styles.main} {...props}>
 			{items.map((photo) => (
-				<div key={photo.id || photo._id} className={styles.wrapper}>
-					<NavLink to={`/my-photo-blog/photo/${String(photo.id || photo._id)}`}>
+				<div key={photo._id} className={styles.wrapper}>
+					<NavLink to={`/photo/${photo._id}`}>
 						<img
 							src={
 								String(photo.path).startsWith("http")
 									? String(photo.path)
-									: `${api}/${String(photo.path).replace(/^\/+/, "")}`
+									: `${API_URL}/${String(photo.path).replace(/^\/+/, "")}`
 							}
 							alt="photo"
 							loading="lazy"
@@ -46,7 +46,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 						</div>
 						<div className={styles.item}>
 							<button className={styles["button-like"]} onClick={() => toggle(photo)}>
-								<Like active={isFavorite(Number(photo.id || photo._id))} />
+								<Like active={isFavorite(photo._id || "")} />
 							</button>
 						</div>
 					</div>
