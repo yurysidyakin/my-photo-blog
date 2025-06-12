@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { api } from "../../api/api";
 import Button from "../../components/Button/Button";
 import Headling from "../../components/Headling/Headling";
 import Input from "../../components/Input/Input";
@@ -13,28 +12,19 @@ function Register({ children }: RegisterProps): JSX.Element {
 			<form className={styles["form"]}>
 				<div className={styles["field"]}>
 					<label htmlFor="email">
-						<img
-							src={`${api}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/email-icon.svg `}
-							alt="email-icon"
-						/>
+						<img src="/public/icons/email-icon.svg" alt="email-icon" />
 					</label>
 					<Input id="email" name="email" placeholder="Email" />
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="password">
-						<img
-							src={`${api}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/password-icon.svg`}
-							alt="password-icon"
-						/>
+						<img src="/public/icons/password-icon.svg" alt="password-icon" />
 					</label>
 					<Input id="password" name="password" type="password" placeholder="Пароль" />
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="name">
-						<img
-							src={`${api}/7b620b405ef73bac462a672f9df70ae706c3bf08/public/icon/user-icon.svg`}
-							alt="user-icon"
-						/>
+						<img src="/public/icons/user-icon.svg" alt="user-icon" />
 					</label>
 					<Input id="name" name="name" placeholder="Имя" />
 				</div>
