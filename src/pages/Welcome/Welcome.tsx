@@ -1,6 +1,6 @@
 import styles from "./Welcome.module.css";
 
-function Main() {
+function Welcome() {
 	return (
 		<div className={styles["welcome"]}>
 			<div className={styles["animation"]}>
@@ -11,4 +11,4 @@ function Main() {
 	);
 }
 
-export default Main;
+export default Welcome;

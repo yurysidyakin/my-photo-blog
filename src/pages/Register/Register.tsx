@@ -4,6 +4,7 @@ import { register } from "../../api/auth.api";
 import Button from "../../components/Button/Button";
 import Headling from "../../components/Headling/Headling";
 import Input from "../../components/Input/Input";
+import { useAuth } from "../../hooks/useAuth";
 import styles from "./Register.module.css";
 import { RegisterProps } from "./Register.props";
 
@@ -15,6 +16,7 @@ interface FormErrors {
 
 function Register({ children }: RegisterProps): JSX.Element {
 	const navigate = useNavigate();
+	const { login } = useAuth();
 	const [error, setError] = useState<string>("");
 	const [errors, setErrors] = useState<FormErrors>({
 		login: false,
@@ -31,12 +33,12 @@ function Register({ children }: RegisterProps): JSX.Element {
 		setError("");
 
 		const formData = new FormData(e.currentTarget);
-		const login = formData.get("login");
+		const loginValue = formData.get("login");
 		const password = formData.get("password");
 		const name = formData.get("name");
 
 		const newErrors = {
-			login: !validateField(login),
+			login: !validateField(loginValue),
 			password: !validateField(password),
 			name: !validateField(name),
 		};
@@ -49,13 +51,19 @@ function Register({ children }: RegisterProps): JSX.Element {
 		}
 
 		try {
-			if (login && password && name) {
-				await register({
-					login: login.toString(),
+			if (loginValue && password && name) {
+				const response = await register({
+					login: loginValue.toString(),
 					password: password.toString(),
 					name: name.toString(),
 				});
-				navigate("/auth/login");
+
+				if (response.token) {
+					login(response.token);
+					navigate("/main");
+				} else {
+					navigate("/auth/login");
+				}
 			}
 		} catch (error: unknown) {
 			if (error instanceof Error) {
@@ -72,7 +80,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 			<form className={styles["form"]} onSubmit={handleSubmit}>
 				<div className={styles["field"]}>
 					<label htmlFor="login">
-						<img src="/public/icons/user-icon.svg" alt="user-icon" />
+						<img src="/icons/user-icon.svg" alt="user-icon" />
 					</label>
 					<Input
 						id="login"
@@ -84,7 +92,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="password">
-						<img src="/public/icons/password-icon.svg" alt="password-icon" />
+						<img src="/icons/password-icon.svg" alt="password-icon" />
 					</label>
 					<Input
 						id="password"
@@ -97,7 +105,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 				</div>
 				<div className={styles["field"]}>
 					<label htmlFor="name">
-						<img src="/public/icons/user-icon.svg" alt="user-icon" />
+						<img src="/icons/user-icon.svg" alt="user-icon" />
 					</label>
 					<Input
 						id="name"

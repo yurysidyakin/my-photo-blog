@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom";
 import Loader from "./components/Loader/Loader.tsx";
 import "./index.css";
 import AuthLayout from "./layout/AuthLayout/AuthLayout.tsx";
@@ -17,11 +17,19 @@ import { store } from "./store/store.ts";
 
 const Main = React.lazy(() => import("./pages/Main/Main.tsx"));
 
+// Функция для проверки авторизации
+const checkAuth = () => {
+	const token = localStorage.getItem("token");
+	if (!token) {
+		return redirect("/auth/login");
+	}
+	return null;
+};
+
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Layout />,
-
 		children: [
 			{
 				path: "/",
@@ -30,6 +38,7 @@ const router = createBrowserRouter([
 						<Welcome />
 					</Suspense>
 				),
+				loader: checkAuth,
 			},
 			{
 				path: "/main",
@@ -38,18 +47,22 @@ const router = createBrowserRouter([
 						<Main />
 					</Suspense>
 				),
+				loader: checkAuth,
 			},
 			{
 				path: "/about",
 				element: <About />,
+				loader: checkAuth,
 			},
 			{
 				path: "/favorite",
 				element: <Favorite />,
+				loader: checkAuth,
 			},
 			{
 				path: "/photo/:id",
 				element: <PhotoCard />,
+				loader: checkAuth,
 			},
 			{
 				path: "*",
