@@ -73,7 +73,7 @@ function Login({ children }: LoginProps): JSX.Element {
 			<form className={styles.form} onSubmit={handleSubmit}>
 				<div className={styles["field"]}>
 					<label htmlFor="login">
-						<img src="/icons/user-icon.svg" alt="user" />
+						<img src="/icons/login-icon.svg" alt="login-icon" />
 					</label>
 					<Input
 						id="login"
