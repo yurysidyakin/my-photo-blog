@@ -53,10 +53,13 @@ function Login({ children }: LoginProps): JSX.Element {
 					password: password.toString(),
 				});
 
-				if (response.token) {
-					login(response.token);
-					navigate("/main");
+				if (!response || !response.access_token) {
+					setError("Неверный формат ответа от сервера");
+					return;
 				}
+
+				login(response.access_token);
+				navigate("/main");
 			}
 		} catch (error: unknown) {
 			if (error instanceof Error) {
@@ -69,7 +72,7 @@ function Login({ children }: LoginProps): JSX.Element {
 
 	return (
 		<div className={styles.login}>
-			<Headling>Вход</Headling>
+			<Headling>Добро пожаловать</Headling>
 			<form className={styles.form} onSubmit={handleSubmit}>
 				<div className={styles["field"]}>
 					<label htmlFor="login">
@@ -97,11 +100,13 @@ function Login({ children }: LoginProps): JSX.Element {
 					/>
 				</div>
 				{error && <div className={styles.error}>{error}</div>}
-				<Button type="submit">Вход</Button>
+				<Button type="submit">Войти</Button>
 			</form>
 			<div className={styles["links"]}>
 				<div>Нет аккаунта?</div>
-				<Link to="/auth/register">Зарегистрироваться</Link>
+				<Link className={styles["link"]} to="/auth/register">
+					Зарегистрироваться
+				</Link>
 			</div>
 			{children}
 		</div>

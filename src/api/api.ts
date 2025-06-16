@@ -11,6 +11,15 @@ export const api: AxiosInstance = axios.create({
 	},
 });
 
+// Добавляем перехватчик запросов для установки токена
+api.interceptors.request.use((config) => {
+	const token = localStorage.getItem("token");
+	if (token) {
+		config.headers.Authorization = `Bearer ${token}`;
+	}
+	return config;
+});
+
 // Добавляем перехватчик ответов для логирования
 api.interceptors.response.use(
 	(response) => response,

@@ -3,8 +3,15 @@ import { ILoginData, IRegisterData } from "../interfaces/auth.interface";
 import { api } from "./api";
 
 export const login = async (data: ILoginData) => {
-	const { data: response } = await api.post("/auth/login", data);
-	return response;
+	try {
+		const response = await api.post("/auth/login", data);
+		return response.data;
+	} catch (error) {
+		if (error instanceof AxiosError) {
+			throw new Error(error.response?.data?.message || "Ошибка при входе");
+		}
+		throw error;
+	}
 };
 
 export const register = async (data: IRegisterData) => {

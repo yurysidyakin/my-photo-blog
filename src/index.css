@@ -5,11 +5,13 @@
 	--text-color: black;
 	--text-color-paragraph: grey;
 	--separator-color: black;
+	--white-color: white;
+	--black-color: black;
 	--text-color-hover: grey;
 	--spinner-color: black;
 	--scrollbar-color: black;
 	--scrollbar-color-background: rgb(206, 206, 206);
-	--primary-color: #b8772d;
+	--primary-color: tomato;
 }
 
 html {
