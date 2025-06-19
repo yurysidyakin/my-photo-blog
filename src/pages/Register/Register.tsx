@@ -120,7 +120,9 @@ function Register({ children }: RegisterProps): JSX.Element {
 			</form>
 			<div className={styles["links"]}>
 				<div>Есть аккаунт?</div>
-				<Link to="/auth/login">Войти</Link>
+				<Link className={styles["link"]} to="/auth/login">
+					Войти
+				</Link>
 			</div>
 			{children}
 		</div>
