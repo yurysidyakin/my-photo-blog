@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { API_URL } from "../../api/api";
+import { getImageUrl } from "../../helpers/getImageUrl";
 import { IPhoto } from "../../interfaces/photo.interface";
 import { favoriteActions } from "../../store/favorite.slice";
 import { AppDispatch, RootState } from "../../store/store";
@@ -25,11 +26,12 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 				<div key={photo._id} className={styles.wrapper}>
 					<NavLink to={`/photo/${photo._id}`}>
 						<img
-							src={
-								String(photo.path).startsWith("http")
-									? String(photo.path)
-									: `${API_URL}/${String(photo.path).replace(/^\/+/, "")}`
-							}
+							// src={
+							// 	String(photo.path).startsWith("http")
+							// 		? String(photo.path)
+							// 		: `${API_URL}/${String(photo.path).replace(/^\/+/, "")}`
+							// }
+							src={getImageUrl(String(photo.path), API_URL)}
 							alt="photo"
 							loading="lazy"
 							className={styles.photo}

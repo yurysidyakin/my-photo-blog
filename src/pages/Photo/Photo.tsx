@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { api, fetchPhotos } from "../../api/api";
+import { API_URL, fetchPhotos } from "../../api/api";
+import { getImageUrl } from "../../helpers/getImageUrl";
 import { IPhoto } from "../../interfaces/photo.interface";
 import styles from "./Photo.module.css";
 import { PhotoProps } from "./Photo.props";
@@ -31,11 +32,12 @@ function Photo({ children }: PhotoProps): JSX.Element {
 		<div className={styles["photo-card"]}>
 			<img
 				className={styles["photo"]}
-				src={
-					String(photo.path).startsWith("http")
-						? String(photo.path)
-						: `${api}/${String(photo.path).replace(/^\/+/, "")}`
-				}
+				// src={
+				// 	String(photo.path).startsWith("http")
+				// 		? String(photo.path)
+				// 		: `${api}/${String(photo.path).replace(/^\/+/, "")}`
+				// }
+				src={getImageUrl(String(photo.path), API_URL)}
 				alt="photo"
 			/>
 			<div className={styles["photo_desc"]}>
