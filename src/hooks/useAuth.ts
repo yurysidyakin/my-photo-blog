@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-// Функция для декодирования JWT и получения payload
 function parseJwt(token: string | null) {
 	if (!token) return null;
 	try {
