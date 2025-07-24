@@ -1,5 +1,5 @@
 export interface IPhoto {
-	id: number;
+	_id?: string;
 	path: string;
 	camera: string;
 	film: string;

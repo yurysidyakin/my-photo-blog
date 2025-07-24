@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router";
-import { BASE_URL } from "../../api/api";
+import { NavLink } from "react-router-dom";
+import { API_URL } from "../../api/api";
+import { getImageUrl } from "../../helpers/getImageUrl";
 import { IPhoto } from "../../interfaces/photo.interface";
 import { favoriteActions } from "../../store/favorite.slice";
 import { AppDispatch, RootState } from "../../store/store";
@@ -13,7 +14,7 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 
 	const favorites = useSelector((state: RootState) => state.favorite.photos);
 
-	const isFavorite = (id: number) => favorites.some((photo: IPhoto) => photo.id === id);
+	const isFavorite = (_id: string) => favorites.some((photo: IPhoto) => photo._id === _id);
 
 	const toggle = (photo: IPhoto) => {
 		dispatch(favoriteActions.toggle(photo));
@@ -22,10 +23,15 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 	return (
 		<div className={styles.main} {...props}>
 			{items.map((photo) => (
-				<div key={photo.id} className={styles.wrapper}>
-					<NavLink to={`/my-photo-blog/photo/${photo.id}`}>
+				<div key={photo._id} className={styles.wrapper}>
+					<NavLink to={`/photo/${photo._id}`}>
 						<img
-							src={`${BASE_URL}/refs/heads/main/${photo.path}`}
+							// src={
+							// 	String(photo.path).startsWith("http")
+							// 		? String(photo.path)
+							// 		: `${API_URL}/${String(photo.path).replace(/^\/+/, "")}`
+							// }
+							src={getImageUrl(String(photo.path), API_URL)}
 							alt="photo"
 							loading="lazy"
 							className={styles.photo}
@@ -33,24 +39,16 @@ function PhotoList({ children, items, ...props }: PhotoListProps): JSX.Element {
 					</NavLink>
 					<div className={styles.desc}>
 						<div className={styles.item}>
-							<img
-								className={styles.icon}
-								src={`${BASE_URL}/9ecf9fa5d9f265fcb4f28446c8dda2f0f8e55390/public/icon/camera-icon.svg`}
-								alt="camera-icon"
-							/>
+							<img className={styles.icon} src="/icons/camera-icon.svg" alt="camera-icon" />
 							{photo.camera}
 						</div>
 						<div className={styles.item}>
-							<img
-								className={styles.icon}
-								src={`${BASE_URL}/d481911a18489a77f96195f34f3f6bcd967edceb/public/icon/film-icon.svg`}
-								alt="film-icon"
-							/>
+							<img className={styles.icon} src="/icons/film-icon.svg" alt="film-icon" />
 							{photo.film}
 						</div>
 						<div className={styles.item}>
 							<button className={styles["button-like"]} onClick={() => toggle(photo)}>
-								<Like active={isFavorite(photo.id)} />
+								<Like active={isFavorite(photo._id || "")} />
 							</button>
 						</div>
 					</div>
