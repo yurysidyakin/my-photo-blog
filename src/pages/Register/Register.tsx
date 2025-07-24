@@ -59,7 +59,7 @@ function Register({ children }: RegisterProps): JSX.Element {
 				});
 
 				if (response.token) {
-					login(response.token);
+					login(response.token, response.name);
 					navigate("/main");
 				} else {
 					navigate("/auth/login");
