@@ -21,7 +21,9 @@ export const favoriteSlice = createSlice({
 	initialState,
 	reducers: {
 		toggle: (state, action: PayloadAction<FavoritePhoto>) => {
-			const existingPhotoIndex = state.photos.findIndex((photo) => photo.id === action.payload.id);
+			const existingPhotoIndex = state.photos.findIndex(
+				(photo) => photo._id === action.payload._id,
+			);
 
 			if (existingPhotoIndex === -1) {
 				state.photos.push(action.payload);

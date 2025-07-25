@@ -8,7 +8,7 @@ function Header({ children }: HeaderProps): JSX.Element {
 	return (
 		<header className={styles.header}>
 			{children}
-			<NavLink to="/my-photo-blog">
+			<NavLink to="/">
 				<Logo />
 			</NavLink>
 			<Menu />

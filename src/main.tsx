@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, redirect, RouterProvider } from "react-router-dom";
 import Loader from "./components/Loader/Loader.tsx";
 import "./index.css";
 import AuthLayout from "./layout/AuthLayout/AuthLayout.tsx";
@@ -17,39 +17,52 @@ import { store } from "./store/store.ts";
 
 const Main = React.lazy(() => import("./pages/main/Main.tsx"));
 
+// Функция для проверки авторизации
+const checkAuth = () => {
+	const token = localStorage.getItem("token");
+	if (!token) {
+		return redirect("/auth/login");
+	}
+	return null;
+};
+
 const router = createBrowserRouter([
 	{
-		path: "/my-photo-blog",
+		path: "/",
 		element: <Layout />,
-
 		children: [
 			{
-				path: "/my-photo-blog",
+				path: "/",
 				element: (
 					<Suspense fallback={<Loader />}>
 						<Welcome />
 					</Suspense>
 				),
+				loader: checkAuth,
 			},
 			{
-				path: "/my-photo-blog/main",
+				path: "/main",
 				element: (
 					<Suspense fallback={<Loader />}>
 						<Main />
 					</Suspense>
 				),
+				loader: checkAuth,
 			},
 			{
-				path: "/my-photo-blog/about",
+				path: "/about",
 				element: <About />,
+				loader: checkAuth,
 			},
 			{
-				path: "/my-photo-blog/favorite",
+				path: "/favorite",
 				element: <Favorite />,
+				loader: checkAuth,
 			},
 			{
-				path: "/my-photo-blog/photo/:id",
+				path: "/photo/:id",
 				element: <PhotoCard />,
+				loader: checkAuth,
 			},
 			{
 				path: "*",
@@ -58,15 +71,15 @@ const router = createBrowserRouter([
 		],
 	},
 	{
-		path: "/my-photo-blog/auth",
+		path: "/auth",
 		element: <AuthLayout />,
 		children: [
 			{
-				path: "/my-photo-blog/auth/login",
+				path: "/auth/login",
 				element: <Login />,
 			},
 			{
-				path: "/my-photo-blog/auth/register",
+				path: "/auth/register",
 				element: <Register />,
 			},
 		],
